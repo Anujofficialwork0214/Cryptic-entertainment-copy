@@ -1,0 +1,141 @@
+import React from "react";
+import AnimatedTitle from "../../animations/AnimatedTitle";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaTwitter } from "react-icons/fa";
+import { CgFacebook } from "react-icons/cg";
+import TwitterLogo from '../../assets/TLogo.png';
+
+const memberData = [
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+    {
+        name: "Alextina Ditarson",
+        designation: "Founder",
+        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        comment:
+            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+    },
+];
+
+const borders = [
+    "hsl(4, 84%, 64%)",
+    "hsl(215, 89%, 75%)",
+    "hsl(40, 87%, 65%)",
+    "hsl(169, 73%, 40%)",
+    "hsl(219, 47%, 55%)",
+];
+
+export default function OurTeam() {
+    return (
+        <div className="bg-slate-100 dark:bg-slate-900 py-6 pt-20">
+            <div className="flex justify-center gap-2">
+                <AnimatedTitle
+                    title={"Testimonials"}
+                    classes="text-3xl font-bold text-black dark:text-white"
+                />
+            </div>
+            <div className="mt-12 grid lg:grid-cols-3 md:grid-cols-2 gap-4 max-w-[1300px] mx-auto items-center">
+                {memberData.map((data, i) => (
+                    <TestimonialCard key={i} data={data} idx={i} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+const TestimonialCard = ({ data, idx }) => {
+    return (
+        <div className="p-4 mb-6">
+            <div
+                style={{ borderTop: `3px solid ${borders[idx % 5]}` }}
+                className="mt-7 relative bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 pt-24"
+            >
+                <div
+                    style={{ boxShadow: "0 10px 30px #101e360f" }}
+                    className="max-w-[40%] absolute top-0 flex justify-center items-center p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-full bg-white dark:bg-slate-700 "
+                >
+                    <img
+                        draggable={false}
+                        src={data.img}
+                        className="w-full rounded-full"
+                        alt={data.name}
+                    />
+                </div>
+                <p className="text-justify text-sm mb-4 text-gray-800/90 dark:text-gray-100/90 review">
+                    {data.comment}
+                </p>
+                <div className="flex justify-between items-center">
+                    <div>
+                        <h3 className="text-lg font-medium text-black dark:text-white">
+                            {data.name}
+                        </h3>
+                        <p className="text-sm text-gray-800/80 dark:text-gray-100/80">
+                            {data.designation}
+                        </p>
+                    </div>
+                    <a href="#" className="flex justify-center items-center">
+                        <img src={TwitterLogo} alt={data.name} className="max-w-[40px]" />
+                    </a>
+                </div>
+                {/* <div className="flex justify-center text-black dark:text-white gap-5 mt-4">
+                    <a href="#" className="w-6 h-6">
+                        <CgFacebook />
+                    </a>
+                    <a href="#" className="w-6 h-6">
+                        <FaTwitter />
+                    </a>
+                    <a href="#" className="w-6 h-6">
+                        <IoLogoYoutube />
+                    </a>
+                </div> */}
+            </div>
+        </div>
+    );
+};
