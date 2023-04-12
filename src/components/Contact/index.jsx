@@ -11,7 +11,7 @@ const Index = () => {
         email: "",
         phone: "",
         company: "",
-        social: "",
+        social_url: "",
     });
 
     const handleChange = (e) => {
@@ -174,18 +174,18 @@ const Index = () => {
                             <label
                                 htmlFor="social"
                                 className={`leading-loose transition-slow absolute ${
-                                    formData.social
+                                    formData.social_url
                                         ? "translate-y-[-12px] text-xs"
                                         : "text-sm text-gray-600 dark:text-gray-200"
                                 }`}
                             >
-                                Social
+                                Social Url
                             </label>
                             <input
                                 type="text"
-                                name="social"
+                                name="social_url"
                                 id="social"
-                                value={formData.social}
+                                value={formData.social_url}
                                 onChange={(e) => handleChange(e)}
                                 className="w-full text-md pr-4 py-1 border-b-2 border-black bg-transparent dark:border-gray-100 focus:outline-none focus:border-gray-600"
                             />
