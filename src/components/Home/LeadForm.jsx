@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import img1 from "../../assets/partners/63079eb1dcb2d1d1e80cc790.png";
-import img2 from "../../assets/partners/download.png";
-import img3 from "../../assets/partners/polygon-matic-logo.png";
-import img4 from "../../assets/partners/download (1).png";
-import img5 from "../../assets/partners/095f339c95a27ca136aa962d09cf6f47.png";
 import AnimatedTitle from "../../animations/AnimatedTitle";
 // import { MdLocationPin } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { HiLocationMarker } from "react-icons/hi";
 
-const partners = [img1, img2, img3, img4, img5];
+import api from "../../api/api";
 
 const LeadForm = () => {
     const [formData, setFormData] = useState({
@@ -28,12 +23,22 @@ const LeadForm = () => {
         });
     };
 
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+        try{
+            const response = await api.post('/contacts', formData);
+            console.log(response); 
+        }catch(err){
+            console.log(err);
+        }
+    }
+
     return (
-        <div className="md:p-20 p-5 bg-slate-100 dark:bg-gray-900">
+        <div className="md:pt-[200px] md:pb-[80px] md:p-20 p-5 bg-slate-100 dark:bg-gray-900">
             {/* <h3 className='font-semibold text-gray-900 dark:text-white text-4xl text-center mb-8'>Lead Form</h3> */}
             <div className='flex justify-center items-center gap-2 mb-8'>
-                <AnimatedTitle title={'Lead'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center'} />
-                <AnimatedTitle title={'Form'} classes={'font-semibold text-rose-500 dark:text-rose-500 text-4xl text-center'} />
+                <AnimatedTitle title={'Contact'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center'} />
+                <AnimatedTitle title={'Us'} classes={'font-semibold text-rose-500 dark:text-rose-500 text-4xl text-center'} />
             </div>
             <div className="grid md:grid-cols-2 gap-10 md:gap-8 max-w-6xl mx-auto">
                 <div className="flex flex-col gap-8 justify-center">
@@ -79,7 +84,7 @@ const LeadForm = () => {
                 </div>
                 <div className="p-10 bg-white dark:bg-slate-800 dark:text-gray-100 rounded-3xl">
                     <h2 className="text-3xl font-medium mb-5">Get in Touch</h2>
-                    <form className="flex flex-col gap-6 floating-input-form">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 floating-input-form">
                         <div className="relative">
                             <label
                                 className={`leading-loose transition-slow absolute ${
@@ -186,7 +191,7 @@ const LeadForm = () => {
                         <input
                             type="submit"
                             value="Submit"
-                            className="px-5 py-3 bg-rose-500 w-fit text-white rounded-xl"
+                            className="px-5 cursor-pointer py-3 bg-rose-500 w-fit text-white rounded-xl"
                         />
                     </form>
                 </div>

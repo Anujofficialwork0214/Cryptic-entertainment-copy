@@ -1,9 +1,8 @@
 import React from "react";
 import AnimatedTitle from "../../animations/AnimatedTitle";
-import { IoLogoYoutube } from "react-icons/io";
-import { FaTwitter } from "react-icons/fa";
-import { CgFacebook } from "react-icons/cg";
-import TwitterLogo from '../../assets/TLogo.png';
+import TwitterLogo from "../../assets/TLogo.png";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const memberData = [
     {
@@ -72,19 +71,48 @@ const borders = [
     "hsl(219, 47%, 55%)",
 ];
 
+const responsive = {
+    superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5,
+    },
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 3,
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 678 },
+        items: 2,
+    },
+    mobile: {
+        breakpoint: { max: 678, min: 0 },
+        items: 1,
+    },
+};
+
 export default function OurTeam() {
     return (
-        <div className="bg-slate-100 dark:bg-slate-900 py-6 pt-20">
+        <div className="bg-slate-100 dark:bg-slate-900 py-6 pt-20 pb-20">
             <div className="flex justify-center gap-2">
                 <AnimatedTitle
                     title={"Testimonials"}
                     classes="text-3xl font-bold text-black dark:text-white"
                 />
             </div>
-            <div className="mt-12 grid lg:grid-cols-3 md:grid-cols-2 gap-4 max-w-[1300px] mx-auto items-center">
-                {memberData.map((data, i) => (
-                    <TestimonialCard key={i} data={data} idx={i} />
-                ))}
+            <div className="mt-12 gap-4 max-w-[1300px] mx-auto items-center">
+                <Carousel
+                    ssr
+                    showDots={true}
+                    dotListClass="mt-6"
+                    // partialVisbile
+                    itemClass="image-item"
+                    responsive={responsive}
+                >
+                    {memberData.map((data, i) => (
+                        <TestimonialCard key={i} data={data} idx={i} />
+                    ))}
+                </Carousel>
             </div>
         </div>
     );
@@ -92,7 +120,7 @@ export default function OurTeam() {
 
 const TestimonialCard = ({ data, idx }) => {
     return (
-        <div className="p-4 mb-6">
+        <div className="p-4 mt-8">
             <div
                 style={{ borderTop: `3px solid ${borders[idx % 5]}` }}
                 className="mt-7 relative bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 pt-24"
@@ -121,7 +149,11 @@ const TestimonialCard = ({ data, idx }) => {
                         </p>
                     </div>
                     <a href="#" className="flex justify-center items-center">
-                        <img src={TwitterLogo} alt={data.name} className="max-w-[40px]" />
+                        <img
+                            src={TwitterLogo}
+                            alt={data.name}
+                            className="max-w-[40px]"
+                        />
                     </a>
                 </div>
                 {/* <div className="flex justify-center text-black dark:text-white gap-5 mt-4">

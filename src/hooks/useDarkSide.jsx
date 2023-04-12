@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 
 export default function useDarkSide() {
-    const [theme, setTheme] = useState(localStorage.theme);
-    const colorTheme = theme === 'dark' ? 'light' : 'dark';
+    const [theme, setTheme] = useState(localStorage.theme || 'dark');
+    const colorTheme = (theme === 'dark') ? 'light' : 'dark';
+    console.log(localStorage.theme, '1')
+    console.log(colorTheme, '2')
     useEffect(() => {
         const root = window.document.documentElement;
         root.classList.remove(colorTheme);

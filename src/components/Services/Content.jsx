@@ -41,7 +41,7 @@ const Image = ({ src, alt, alignContent }) => {
 const ContentSection = ({ title, content }) => {
     return (
         <div className="p-4 flex flex-col gap-5 justify-center ">
-            <h3 className="text-xl font-medium text-black dark:text-white">
+            <h3 className="text-4xl font-medium text-black dark:text-white">
                 {title}
             </h3>
             <p className="text-base text-justify text-gray-800 dark:text-gray-100">

@@ -45,21 +45,21 @@ const data = [
         alt: "Music Videos",
         yt_link: "uACi_Q3i7vs",
     },
-    {
+    /* {
         title: "Metaverse Concerts and Events",
         content: "",
         img: "/services/metaverse_concert.gif",
         alt: "Metaverse Concerts and Events",
         yt_link: "9Sa16lDGiR8",
-    },
+    }, */
 ];
 
 export default function Index() {
     return (
-        <div className="p-3 md:p-5 bg-slate-100 dark:bg-gray-900">
+        <div className="md:py-[60px] md:px-20 px-5 py-5 bg-slate-100 dark:bg-gray-900 ">
             <div className="max-w-[1200px] mx-auto pt-10">
-            <AnimatedTitle title={'Services'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center'} />
-                <div className="grid mt-8 md:grid-cols-3 grid-cols-1 gap-5">
+            <AnimatedTitle title={'Services'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center mb-12'} />
+                <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
                     {data.map((item, i) => (
                         <div className="p-2 md:p-2 sm:p-2 lg:p-2">
                             <ServiceCard data={item} key={i} />
@@ -78,10 +78,10 @@ const ServiceCard = ({ data }) => {
                 className="relative overlay-on-hover overflow-hidden p-2 md:p-2 sm:p-5 lg:p-5 isolate rounded-xl bg-cover bg-no-repeat group"
                 style={{ backgroundImage: `url("${data.img}")` }}
             >
-                <div className="overlay absolute inset-0 bg-black/70 lg:bg-black/0  lg:group-hover:bg-black/70 z-[-1] transition duration-300"></div>
+                <div className="overlay absolute inset-0 bg-black/60  z-[-1] transition duration-300"></div>
 
                 <div
-                    className="text-white text-center flex flex-col gap-6 items-center p-6 transition-all duration-300 lg:border-transparent border-2 lg:group-hover:border-white"
+                    className="text-white text-center flex flex-col gap-6 items-center p-6 transition-all duration-300 lg:border-transparent border-2 lg:border-white"
                     style={{ borderRadius: "inherit" }}
                 >
                     <h3 className="text-2xl font-bold">
@@ -92,18 +92,18 @@ const ServiceCard = ({ data }) => {
                                     style={{
                                         transitionDelay: `${idx * 100}ms`,
                                     }}
-                                    className={`lg:opacity-0 transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:opacity-100 lg:group-hover:translate-y-0`}
+                                    className={` transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0`}
                                 >
                                     {word}
                                 </span>
                             );
                         })}
                     </h3>
-                    <p className="lg:opacity-0 transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 group-hover:delay-300">
+                    <p className=" transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0 group-hover:delay-300">
                         {data.content}
                     </p>
                     <a
-                        className="lg:opacity-0 px-6 py-2 border-2 border-white text-white lg:group-hover:opacity-100 hover:bg-white hover:text-black rounded-tr-xl rounded-bl-xl"
+                        className=" px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-black rounded-tr-xl rounded-bl-xl"
                         href={data.yt_link}
                     >
                         View Sample

@@ -1,22 +1,29 @@
-import React from 'react'
-import AboutHome from '../components/Home/About'
-import Hero from '../components/Home/Hero'
-import LeadForm from '../components/Home/LeadForm'
-import PastWork from '../components/Home/PastWork'
-import Services from '../components/Home/Services'
-import Web3Partner from '../components/Home/Web3Partner'
+import React from "react";
+import AboutHome from "../components/Home/About";
+import Hero from "../components/Home/Hero";
+import LeadForm from "../components/Home/LeadForm";
+import PastWork from "../components/Home/PastWork";
+import Services from "../components/Home/Services";
+import Web3Partner from "../components/Home/Web3Partner";
+import { motion } from "framer-motion";
+import pageTransition from "../animations/pageTransition";
 
 const Home = () => {
     return (
-        <div>
+        <motion.div
+            variants={pageTransition}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+        >
             <Hero />
-            <Web3Partner />
-            <AboutHome />
-            <Services />
-            <PastWork />
             <LeadForm />
-        </div>
-    )
-}
+            <AboutHome />
+            <Web3Partner />
+            <PastWork />
+            <Services />
+        </motion.div>
+    );
+};
 
-export default Home
+export default Home;

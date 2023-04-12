@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import ImageShadow from 'react-image-shadow';
 import 'react-image-shadow/assets/index.css';
 
+
 const banners = [
     {
         'cover' : img1,
@@ -56,9 +57,9 @@ const Hero = () => {
             </div>
 
             <Link to={`/video/${videoPre}`}>
-            <div className="absolute md:top-[40%] top-[30%] md:left-[50%] left-[40%] bg-rose-500/20 backdrop-blur-md rounded-full p-3 cursor-pointer">
+            <div className="group absolute md:top-[40%] top-[30%] md:left-[50%] left-[40%] bg-rose-500/20 backdrop-blur-md rounded-full p-3 cursor-pointer">
                 <div className='ripple'><IoPlay className="h-12 w-12 text-rose-500 dark:text-rose-500 " /></div>
-                <span className='absolute bottom--4 text-rose-500 text-sm w-max left-0'>Watch Now</span>
+                <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
             </div>
             </Link>
             

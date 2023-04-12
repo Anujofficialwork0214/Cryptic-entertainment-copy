@@ -3,12 +3,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { HiLocationMarker } from "react-icons/hi";
 
-import {SMTPClient} from 'smtp-client';
-
-let s = new SMTPClient({
-  host: 'mx.domain.com',
-  port: 25
-});
+import api from "../../api/api";
 
 const Index = () => {
     const [formData, setFormData] = useState({
@@ -28,13 +23,12 @@ const Index = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
-        await s.connect();
-            await s.greet({hostname: 'mx.domain.com'}); // runs EHLO command or HELO as a fallback
-            await s.authPlain({username: 'john', password: 'secret'}); // authenticates a user
-            await s.mail({from: 'from@sender.com'}); // runs MAIL FROM command
-            await s.rcpt({to: 'to@recipient.com'}); // runs RCPT TO command (run this multiple times to add more recii)
-            await s.data('mail source'); // runs DATA command and streams email source
-            await s.quit(); 
+        try{
+            const response = await api.post('/contacts', formData);
+            console.log(response); 
+        }catch(err){
+            console.log(err);
+        }
     }
 
     return (

@@ -1,6 +1,7 @@
 import React from "react";
-import Logo from "../../assets/logo.jpg";
+import Logo from "../../assets/logo/logo ce.svg";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { IoHeart } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -12,34 +13,45 @@ export default function Footer() {
                 <div className="max-w-[1100px] mx-auto grid md:grid-cols-4 gap-6 md:gap-3 md:mb-6 mb-24">
                     {/* company details */}
                     <div className="bg-white/50 dark:bg-slate-900/30 backdrop-blur-lg shadow-md col-span-2 p-3 md:p-8 rounded-2xl">
-                        <img src={Logo} alt="logo" className="w-24 mb-3 rounded-3xl" />
+                        <img src={Logo} alt="logo" className="w-20 mb-3 rounded-3xl" />
                         <p className="text-gray-800 dark:text-gray-200 text-base md:max-w-[95%]">
                         Cryptic Entertainments is an India-based production house focused on bringing the Indian tech story. We are continuously showcasing the new emerging tech stories out of India in new fields like Blockchain, AI, Metaverse etc.
                         </p>
                         <div className="flex gap-3 mt-4">
                             <a
-                                href="/"
+                                href="https://www.facebook.com/crypticentertainments"
+                                target="_blank"
                                 className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700  p-2"
                             >
                                 <BsFacebook className="text-xl text-gray-900 dark:text-gray-100" />
                             </a>
                             <a
-                                href="/"
+                                href="https://www.instagram.com/crypticentertainments/"
+                                target="_blank"
                                 className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
                                 <BsInstagram className="text-xl text-gray-900 dark:text-gray-100" />
                             </a>
                             <a
-                                href="/"
+                                href="https://twitter.com/Cryptic_Media"
+                                target="_blank"
                                 className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
                                 <BsTwitter className="text-xl text-gray-900 dark:text-gray-100" />
                             </a>
                             <a
-                                href="/"
+                                href="https://www.youtube.com/c/CrypticEntertainments"
+                                target="_blank"
                                 className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
                                 <FaYoutube className="text-xl text-gray-900 dark:text-gray-100" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/74962611/admin/"
+                                target="_blank"
+                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
+                            >
+                                <FaLinkedinIn className="text-xl text-gray-900 dark:text-gray-100" />
                             </a>
                         </div>
                     </div>

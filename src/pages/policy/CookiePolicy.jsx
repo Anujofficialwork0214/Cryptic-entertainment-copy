@@ -1,5 +1,7 @@
 import React from "react";
 import Banner from "../../components/common/Banner";
+import { motion } from "framer-motion";
+import pageTransition from "../../animations/pageTransition";
 
 const data ={
     title: "Cookie Policy",
@@ -8,7 +10,12 @@ const data ={
 
 export default function CookiePolicy() {
     return (
-        <div>
+        <motion.div
+            variants={pageTransition}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+        >
             <Banner title1="Cookie" title2="Policy" />
             <div className="bg-slate-100 dark:bg-slate-900 py-6 pt-20">
                 <div className="grid gap-8 max-w-[1200px] mx-auto">
@@ -18,7 +25,7 @@ export default function CookiePolicy() {
                     <Content title={data.title} content={data.content}/>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

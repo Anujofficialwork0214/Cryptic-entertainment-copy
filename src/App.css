@@ -1,29 +1,30 @@
-body{
-    background-color: rgb(203 213 225);
+body {
+    background-color: white;
+    overflow-x: hidden;
 }
 
-.dark body{
-    background-color: rgb(51 65 85 );
+.dark body {
+    background-color: rgb(51 65 85);
 }
 
-#root{
+#root {
     position: relative;
 }
 
-#root:has(.modal){
+#root:has(.modal) {
     max-height: 100vh;
     overflow: hidden;
 }
 
-body::-webkit-scrollbar{
-    width: 0.5rem;
+body::-webkit-scrollbar {
+    width: 0;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
     background: rgba(203, 213, 225, 0);
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.518);
     color: rgb(0 0 0);
     border-radius: 50px;
@@ -61,7 +62,7 @@ body::-webkit-scrollbar-thumb{
     backdrop-filter: blur(1px);
 }
 
-.story-card-overlay-2{
+.story-card-overlay-2 {
     transition: all 300ms ease-in-out;
     transition-delay: 0;
 }
@@ -197,62 +198,57 @@ body::-webkit-scrollbar-thumb{
     transition-delay: 0.2s;
 }
 
-
-
 .nav-scroll {
     animation: nav-scroll-animation 0.5s forwards;
-  }
-  
-  @keyframes nav-scroll-animation {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-
-  
-  
-  .gif {
-    animation-iteration-count: 1;
-  }
-  
-  
-.animation-rotate-forward{
-    --duration: 20s;
-    -webkit-animation: rotate-forward var(--duration) linear infinite;
-  -moz-animation: rotate-forward var(--duration) linear infinite;
-  -ms-animation: rotate-forward var(--duration) linear infinite;
-  -o-animation: rotate-forward var(--duration) linear infinite;
-  animation: rotate-forward var(--duration) linear infinite;
 }
 
-.animation-rotate-backward{
+@keyframes nav-scroll-animation {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.gif {
+    animation-iteration-count: 1;
+}
+
+.animation-rotate-forward {
+    --duration: 20s;
+    -webkit-animation: rotate-forward var(--duration) linear infinite;
+    -moz-animation: rotate-forward var(--duration) linear infinite;
+    -ms-animation: rotate-forward var(--duration) linear infinite;
+    -o-animation: rotate-forward var(--duration) linear infinite;
+    animation: rotate-forward var(--duration) linear infinite;
+}
+
+.animation-rotate-backward {
     --duration: 20s;
     -webkit-animation: rotate-backward var(--duration) linear infinite;
-  -moz-animation: rotate-backward var(--duration) linear infinite;
-  -ms-animation: rotate-backward var(--duration) linear infinite;
-  -o-animation: rotate-backward var(--duration) linear infinite;
-  animation: rotate-backward var(--duration) linear infinite;
+    -moz-animation: rotate-backward var(--duration) linear infinite;
+    -ms-animation: rotate-backward var(--duration) linear infinite;
+    -o-animation: rotate-backward var(--duration) linear infinite;
+    animation: rotate-backward var(--duration) linear infinite;
 }
 
 @keyframes rotate-forward {
     from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 @keyframes rotate-backward {
     from {
@@ -261,22 +257,79 @@ body::-webkit-scrollbar-thumb{
         -webkit-transform: rotate(0deg);
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
-      }
-      to {
+    }
+    to {
         -ms-transform: rotate(-360deg);
         -moz-transform: rotate(-360deg);
         -webkit-transform: rotate(-360deg);
         -o-transform: rotate(-360deg);
         transform: rotate(-360deg);
-      }
+    }
 }
 
-.review::before{
+.review::before {
     content: open-quote;
     font-size: 1.8em;
 }
 
-.review::after{
+.review::after {
     content: close-quote;
     font-size: 1.8em;
+}
+
+label {
+    webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.counter {
+    animation: scaleUpDown 1s linear infinite 500ms;
+}
+
+@keyframes scaleUpDown {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.react-multi-carousel-item {
+    padding-top: 40px;
+}
+
+.loader-animation-title span {
+    display: inline-block;
+    transform: translateX(400px) scale(0);
+    animation: placeheading 800ms forwards;
+    user-select: none;
+}
+
+.loader-animation-title:nth-child(1){
+    @apply text-black dark:text-white;
+
+}
+
+.loader-animation-title:nth-child(2){
+    color: #f43f5e;
+}
+
+@keyframes placeheading {
+    from {
+        transform: translateX(400px) scale(0);
+    }
+    60% {
+        transform: translateX(-100px) scale(1);
+    }
+    to {
+        transform: translateX(0) scale(1);
+    }
 }
