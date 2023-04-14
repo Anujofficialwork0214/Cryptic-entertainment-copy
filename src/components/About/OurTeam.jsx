@@ -69,7 +69,7 @@ const MemberCard = ({ data, idx }) => {
     return (
         <div className="p-8 text-center">
             <div className=" relative rounded-3xl">
-                <div className="flex justify-center items-center rounded-full mb-4 p-4 animation-rotate-forward " style={{ border: `2px dashed ${borders[idx % 5]}`, boxShadow: '0 10px 30px #101e360f'}}>
+                <div className="flex max-w-[400px] mx-auto justify-center items-center rounded-full mb-4 p-4 animation-rotate-forward " style={{ border: `2px dashed ${borders[idx % 5]}`, boxShadow: '0 10px 30px #101e360f'}}>
                     <img
                         draggable={false}
                         src={data.img}

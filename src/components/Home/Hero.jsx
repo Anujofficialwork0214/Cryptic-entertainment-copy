@@ -12,22 +12,22 @@ import 'react-image-shadow/assets/index.css';
 const banners = [
     {
         'cover' : img1,
-        'video_sample' : '/services/ad_films.gif',
+        'video_sample' : '/hero/ezgif-5-c900b725d7.gif',
         'videoId': 'kl5JgeR7LgI'
     },
     {
         'cover' : img2,
-        'video_sample' : '/services/brand_films.gif',
+        'video_sample' : '/hero/ezgif-5-dbf9421843.gif',
         'videoId': 'JQUr46o5EOg'
     },
     {
         'cover' : img3,
-        'video_sample' : '/services/music_videos.gif',
+        'video_sample' : '/hero/ezgif-5-0875e29b53.gif',
         'videoId': 'tLTK5s_Q6AY'
     },
     {
         'cover' : img4,
-        'video_sample' : '/services/short_films.gif',
+        'video_sample' : '/hero/ezgif-5-89abffe158.gif',
         'videoId': 'ynxDNBvxZuc'
     }
 ];
@@ -50,7 +50,7 @@ const Hero = () => {
     }
 
     return (
-        <div className='w-full relative z-10 '>
+        <div className='w-full relative z-10 mb-10 md:mb-0'>
             <div className='pt-0 w-full gradient-bg box-shadow'>
                 {/* <img src={banners[currentImageIndex]} alt='Banner' className='w-full' /> */}
                 <img src={fullSize} alt='Banner' className='w-full image' once />
@@ -68,7 +68,7 @@ const Hero = () => {
                 <div className='grid grid-cols-4 gap-4 '>
                 {banners.map((item, i) => (
                     <div className='w-full rounded-2xl' key={i}>
-                        <img src={item.cover} alt='Banner' className={`w-full rounded-2xl cursor-pointer hover:grayscale-0 transition-all ease-in-out duration-500 delay-300 ${fullSize === item.cover ? 'grayscale-0' : 'grayscale'}`} onClick={() => { getImage(item.video_sample, item.videoId) }} />
+                        <img src={item.cover} alt='Banner' className={`w-full rounded-2xl cursor-pointer hover:grayscale-0 transition-all ease-in-out duration-500 delay-300 ${fullSize === item.video_sample ? 'grayscale-0' : 'grayscale'}`} onClick={() => { getImage(item.video_sample, item.videoId) }} />
                     </div>
                 ))}
                 </div>

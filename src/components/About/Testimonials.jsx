@@ -120,7 +120,7 @@ export default function OurTeam() {
 
 const TestimonialCard = ({ data, idx }) => {
     return (
-        <div className="p-4 mt-8">
+        <div className="p-4 my-8">
             <div
                 style={{ borderTop: `3px solid ${borders[idx % 5]}` }}
                 className="mt-7 relative bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 pt-24"

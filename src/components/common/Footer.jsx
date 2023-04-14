@@ -21,37 +21,37 @@ export default function Footer() {
                             <a
                                 href="https://www.facebook.com/crypticentertainments"
                                 target="_blank"
-                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700  p-2"
+                                className="w-42 text-gray-900 dark:text-gray-100 transition-all duration-300 hover:text-rose-500 dark:hover:text-rose-500 aspect-square rounded-full bg-slate-300 dark:bg-slate-700  p-2"
                             >
-                                <BsFacebook className="text-xl text-gray-900 dark:text-gray-100" />
+                                <BsFacebook className="text-xl" />
                             </a>
                             <a
                                 href="https://www.instagram.com/crypticentertainments/"
                                 target="_blank"
-                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
+                                className="w-42  text-gray-900 dark:text-gray-100 transition-all duration-300 hover:text-rose-500 dark:hover:text-rose-500 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
-                                <BsInstagram className="text-xl text-gray-900 dark:text-gray-100" />
+                                <BsInstagram className="text-xl " />
                             </a>
                             <a
                                 href="https://twitter.com/Cryptic_Media"
                                 target="_blank"
-                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
+                                className="w-42  text-gray-900 dark:text-gray-100 transition-all duration-300 hover:text-rose-500 dark:hover:text-rose-500 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
-                                <BsTwitter className="text-xl text-gray-900 dark:text-gray-100" />
+                                <BsTwitter className="text-xl " />
                             </a>
                             <a
                                 href="https://www.youtube.com/c/CrypticEntertainments"
                                 target="_blank"
-                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
+                                className="w-42  text-gray-900 dark:text-gray-100 transition-all duration-300 hover:text-rose-500 dark:hover:text-rose-500 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
-                                <FaYoutube className="text-xl text-gray-900 dark:text-gray-100" />
+                                <FaYoutube className="text-xl " />
                             </a>
                             <a
                                 href="https://www.linkedin.com/company/74962611/admin/"
                                 target="_blank"
-                                className="w-42 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
+                                className="w-42  text-gray-900 dark:text-gray-100 transition-all duration-300 hover:text-rose-500 dark:hover:text-rose-500 aspect-square rounded-full bg-slate-300 dark:bg-slate-700 p-2"
                             >
-                                <FaLinkedinIn className="text-xl text-gray-900 dark:text-gray-100" />
+                                <FaLinkedinIn className="text-xl " />
                             </a>
                         </div>
                     </div>

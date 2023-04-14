@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const TEXT = ["Cryptic", "Entertainment"];
+const TEXT = ["Cryptic", "Entertainments"];
 
 export default function PageLoader() {
     const [style, setStyle] = React.useState({});

@@ -4,6 +4,7 @@ import AnimatedTitle from "../../animations/AnimatedTitle";
 import { BsTelephoneFill } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { HiLocationMarker } from "react-icons/hi";
+import toast from 'react-hot-toast'
 
 import api from "../../api/api";
 
@@ -13,7 +14,7 @@ const LeadForm = () => {
         email: "",
         phone: "",
         company: "",
-        social: "",
+        social_url: "",
     });
 
     const handleChange = (e) => {
@@ -27,14 +28,22 @@ const LeadForm = () => {
         e.preventDefault();
         try{
             const response = await api.post('/contacts', formData);
+            toast.success('Your message has been sent successfully!')
             console.log(response); 
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                company: "",
+                social_url: "",
+            });
         }catch(err){
             console.log(err);
         }
     }
 
     return (
-        <div className="md:pt-[200px] md:pb-[80px] md:p-20 p-5 bg-slate-100 dark:bg-gray-900">
+        <div className="pt-[100px] md:pt-[200px] md:pb-[80px] md:p-20 p-5 bg-slate-100 dark:bg-gray-900">
             {/* <h3 className='font-semibold text-gray-900 dark:text-white text-4xl text-center mb-8'>Lead Form</h3> */}
             <div className='flex justify-center items-center gap-2 mb-8'>
                 <AnimatedTitle title={'Contact'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center'} />
@@ -172,18 +181,18 @@ const LeadForm = () => {
                             <label
                                 htmlFor="social"
                                 className={`leading-loose transition-slow absolute ${
-                                    formData.social
+                                    formData.social_url
                                         ? "translate-y-[-12px] text-xs"
                                         : "text-sm text-gray-600 dark:text-gray-200"
                                 }`}
                             >
-                                Social
+                                Social Url
                             </label>
                             <input
                                 type="text"
-                                name="social"
+                                name="social_url"
                                 id="social"
-                                value={formData.social}
+                                value={formData.social_url}
                                 onChange={(e) => handleChange(e)}
                                 className="w-full text-md pr-4 py-1 border-b-2 border-black bg-transparent dark:border-gray-100 focus:outline-none focus:border-gray-600"
                             />

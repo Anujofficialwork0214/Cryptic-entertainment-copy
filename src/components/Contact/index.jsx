@@ -4,6 +4,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { HiLocationMarker } from "react-icons/hi";
 
 import api from "../../api/api";
+import toast from "react-hot-toast";
 
 const Index = () => {
     const [formData, setFormData] = useState({
@@ -25,6 +26,14 @@ const Index = () => {
         e.preventDefault();
         try{
             const response = await api.post('/contacts', formData);
+            toast.success('Your message has been sent successfully!')
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                company: "",
+                social_url: "",
+            });
             console.log(response); 
         }catch(err){
             console.log(err);

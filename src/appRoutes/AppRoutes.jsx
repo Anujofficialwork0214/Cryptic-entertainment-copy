@@ -15,11 +15,12 @@ import PrivacyPolicy from "../pages/policy/PrivacyPolicy";
 import TermsAndCondition from "../pages/policy/TermsAndCondition";
 import PageLoader from "../animations/PageLoader";
 import { AnimatePresence, motion } from "framer-motion";
+import  { Toaster } from "react-hot-toast";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <Index />
+            
             {children}
             <ScrollToTop />
         </>
@@ -30,6 +31,7 @@ const AppRoutes = () => {
     return (
         <BrowserRouter>
             <PageLoader />
+            <Index />
             <ScrollTop />
             <AnimatedRoutes />
             <Footer />
@@ -41,6 +43,7 @@ const AnimatedRoutes = () => {
     const location = useLocation();
     return (
         <AnimatePresence>
+            <Toaster position="top-center" reverseOrder={true} />
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Layout key={1} children={<Home />} />} />
                 <Route path="/Home" element={<Layout key={1} children={<Home />} />} />
