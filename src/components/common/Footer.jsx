@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-100 dark:bg-slate-900 text-black dark:text-white">
       <div className="bg-slate-200 dark:bg-slate-800 px-3 py-4 md:px-6 md:py-10 rounded-t-3xl">
-        <div className="max-w-[1100px] mx-auto grid md:grid-cols-5 gap-6 md:gap-3 md:mb-6 mb-24">
+        <div className="max-w-[1100px] mx-auto grid sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-3 md:mb-6 mb-52">
           {/* company details */}
           <div className="bg-white/50 dark:bg-slate-900/30 backdrop-blur-lg shadow-md col-span-2 p-3 md:p-8 rounded-2xl">
             <img src={Logo} alt="logo" className="w-20 mb-3 rounded-3xl" />
