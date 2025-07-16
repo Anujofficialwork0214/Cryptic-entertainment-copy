@@ -95,7 +95,7 @@ const Hero = () => {
                 <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
             </div>
             </Link> */}
-      <div className="flex flex-col items-center justify-center absolute inset-0 top-[-10%] md:top-[-20%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[1.2]">
+      <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[-20%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[1.2]">
         <p className="text-[35px] md:text-[55px] xl:text-[135px] text-white font-[300]">
           TRUST. <span className="font-[500]">BUILT IN.</span>
         </p>
