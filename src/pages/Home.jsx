@@ -17,11 +17,11 @@ const Home = () => {
             exit="exit"
         >
             <Hero />
+            <Services />
             <LeadForm />
             <AboutHome />
             <Web3Partner />
             <PastWork />
-            <Services />
         </motion.div>
     );
 };
