@@ -15,7 +15,7 @@ const Movies = () => {
             {/* <AnimatePresence> */}
 
             {/* </AnimatePresence> */}
-            <Banner title1="Movies" />
+            <Banner title1="BRANDS WE BUILT" />
             <Index />
         </motion.div>
     );

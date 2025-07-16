@@ -48,7 +48,7 @@ const AnimatedRoutes = () => {
                 <Route path="/" element={<Layout key={1} children={<Home />} />} />
                 <Route path="/Home" element={<Layout key={1} children={<Home />} />} />
                 <Route
-                    path="/Movies"
+                    path="/Our-Work"
                     element={<Layout key={1} children={<Movies />} />}
                 />
                 <Route
