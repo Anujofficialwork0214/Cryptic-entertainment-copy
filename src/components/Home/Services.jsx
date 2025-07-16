@@ -4,7 +4,7 @@ import AnimatedTitle from "../../animations/AnimatedTitle";
 
 const data = [
   {
-   title: "⭐ Top Rated : Personal Brand Building",
+    title: "⭐ Top Rated : Personal Brand Building",
     content:
       "Build a unique identity that reflects your values, skills, and voice. Stand out, earn trust, and unlock opportunities",
     img: "/services/brand_films.gif",
@@ -141,62 +141,62 @@ const ServiceCard = ({ data }) => {
       <div className="overlay absolute inset-0 bg-[#1e293b] z-[-1] transition duration-300"></div>
 
       <div
-  className="text-white text-center flex flex-col items-center h-[250px] justify-start p-6 transition-all duration-300 lg:border-transparent border-2 lg:border-white"
-  style={{ borderRadius: "inherit" }}
->
-  {/* Title */}
-  <h3 className="text-lg font-bold h-[48px] mb-8 md:mb-7 lg:mb-6 flex flex-wrap justify-center items-center text-center leading-snug">
-    {/* Conditional rendering for the specific title */}
-    {data.title === "⭐ Top Rated : Personal Brand Building" ? (
-      <>
-        <span className="text-sm font-semibold tracking-wide flex items-center justify-center">
-          <span className="inline-block mr-1">⭐</span>
-          <span
-            className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
-            style={{ transitionDelay: `0ms` }} // Adjust delay if needed
-          >
-            Top
-          </span>
-          <span
-            className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
-            style={{ transitionDelay: `100ms` }} // Adjust delay if needed
-          >
-            Rated:
-          </span>
-        </span>
-        <span className="text-lg font-bold">
-          {" "}
-          {/* Main title styling */}
-          {"Personal Brand Building".split(" ").map((word, idx) => (
-            <span
-              key={idx}
-              style={{ transitionDelay: `${(idx + 2) * 100}ms` }} // Adjust delay to follow "Top Rated"
-              className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
-            >
-              {word}
-            </span>
-          ))}
-        </span>
-      </>
-    ) : (
-      // Original logic for other titles
-      (data.title + "").split(" ").map((word, idx) => (
-        <span
-          key={idx}
-          style={{ transitionDelay: `${idx * 100}ms` }}
-          className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
-        >
-          {word}
-        </span>
-      ))
-    )}
-  </h3>
+        className="text-white text-center flex flex-col items-center h-[250px] justify-start p-6 transition-all duration-300 lg:border-transparent border-2 lg:border-white"
+        style={{ borderRadius: "inherit" }}
+      >
+        {/* Title */}
+        <h3 className="text-lg font-bold h-[48px] mb-8 md:mb-7 lg:mb-6 flex flex-wrap justify-center items-center text-center leading-snug">
+          {/* Conditional rendering for the specific title */}
+          {data.title === "⭐ Top Rated : Personal Brand Building" ? (
+            <>
+              <span className="text-sm font-semibold tracking-wide flex items-center justify-center">
+                <span className="inline-block mr-1">⭐</span>
+                <span
+                  className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
+                  style={{ transitionDelay: `0ms` }} // Adjust delay if needed
+                >
+                  Top
+                </span>
+                <span
+                  className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
+                  style={{ transitionDelay: `100ms` }} // Adjust delay if needed
+                >
+                  Rated:
+                </span>
+              </span>
+              <span className="text-lg font-bold">
+                {" "}
+                {/* Main title styling */}
+                {"Personal Brand Building".split(" ").map((word, idx) => (
+                  <span
+                    key={idx}
+                    style={{ transitionDelay: `${(idx + 2) * 100}ms` }} // Adjust delay to follow "Top Rated"
+                    className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
+                  >
+                    {word}
+                  </span>
+                ))}
+              </span>
+            </>
+          ) : (
+            // Original logic for other titles
+            (data.title + "").split(" ").map((word, idx) => (
+              <span
+                key={idx}
+                style={{ transitionDelay: `${idx * 100}ms` }}
+                className="transition-all duration-300 inline-block mr-2 tracking-wide capitalize lg:translate-y-1 lg:group-hover:translate-y-0"
+              >
+                {word}
+              </span>
+            ))
+          )}
+        </h3>
 
-  {/* Content */}
-  <p className="text-center text-sm md:text-[13px] lg:text-base leading-relaxed text-white transition-all duration-300 tracking-wide capitalize group-hover:delay-300">
-    {data.content}
-  </p>
-</div>
+        {/* Content */}
+        <p className="text-center text-sm md:text-[13px] lg:text-base leading-relaxed text-white transition-all duration-300 tracking-wide capitalize group-hover:delay-300">
+          {data.content}
+        </p>
+      </div>
     </div>
     //   </Link>
   );

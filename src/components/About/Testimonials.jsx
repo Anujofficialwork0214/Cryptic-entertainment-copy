@@ -6,61 +6,34 @@ import "react-multi-carousel/lib/styles.css";
 
 const memberData = [
     {
-        name: "Alextina Ditarson",
-        designation: "Founder",
+        name: "Charul Sharma",
+        designation: "Founder of Career GPT",
         img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+            "Before working with Cryptic, I was struggling to show the world what we were building. Within months, they transformed my scattered ideas into a clear personal brand. My LinkedIn engagement tripled, and I started getting inbound invites from VCs and podcasts I’d only dreamed of before. They don’t just create content — they create credibility",
     },
     {
-        name: "Alextina Ditarson",
-        designation: "Founder",
+        name: "Inderjeet Aulakh",
+        designation: "MPro Developers",
         img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+            "As a founder in a real estate market, standing out is a necessity. Cryptic built a strategy that reflected my journey and values, then executed it flawlessly across Instagram and YouTube. We’ve closed three major deals directly from leads who said, ‘I’ve been watching your videos.’ It’s hands‑down the best investment we made last year.",
     },
     {
-        name: "Alextina Ditarson",
-        designation: "Founder",
+        name: "Jaspreet Singh",
+        designation: "NekPunjabi Estates",
         img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+            "I always thought personal branding was just for influencers. Cryptic showed me it’s for serious business too. Their team handles everything — from scripting reels to posting and analytics — so I can focus on running my company. Today, my content feels authentic and has directly brought in high‑value property buyers",
     },
     {
-        name: "Alextina Ditarson",
-        designation: "Founder",
+        name: "Akash Bajwa",
+        designation: "Creator of Nek Punjabi History",
         img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
+            "I had the passion and knowledge, but I didn’t know how to package it for a wider audience. Cryptic helped me turn my love for Punjabi heritage into a powerful personal brand. My videos now reach millions every week. They truly understand how to turn a story into influence.",
     },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        comment:
-            "Lorem ipsum dolor sit amet  elit. , repellat. Natus excepturi quaerat ullam  asperiores aliquam minima, accusamus hic at molestiae repellat ducimus modi corrupti eveniet culpa!",
-    },
+    
 ];
 
 const borders = [
@@ -100,7 +73,7 @@ export default function OurTeam() {
                     classes="text-3xl font-bold text-black dark:text-white"
                 />
             </div>
-            <div className="mt-12 gap-4 max-w-[1300px] mx-auto items-center">
+            <div className="mt-12 gap-4 max-w-[1300px]  mx-auto items-center">
                 <Carousel
                     ssr
                     showDots={true}
@@ -120,10 +93,10 @@ export default function OurTeam() {
 
 const TestimonialCard = ({ data, idx }) => {
     return (
-        <div className="p-4 my-8">
+        <div className="p-4 my-8 ">
             <div
                 style={{ borderTop: `3px solid ${borders[idx % 5]}` }}
-                className="mt-7 relative bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 pt-24"
+                className="mt-7 relative bg-white dark:bg-slate-800 rounded-3xl shadow-lg p-8 pt-24 h-[350px]"
             >
                 <div
                     style={{ boxShadow: "0 10px 30px #101e360f" }}
