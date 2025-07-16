@@ -45,12 +45,12 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
         </NavLink>
       ))}
       <div className="flex justify-end gap-2">
-        <div className="absolute -top-[92vh]  transform -translate-x-1/4 bg-white/50 dark:bg-slate-900/50 py-4 px-3  shadow backdrop-blur-md">
+        <div className="absolute -top-[92vh]  transform -translate-x-1/4 shadow  py-4 px-3  ">
           <a
             href="https://forms.gle/TtBK4YUJZ2oJbuBc8"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white text-black font-semibold text-sm px-1 py-1 shadow-md hover:bg-gray-100 transition-all duration-300"
+            class="bg-white text-black font-semibold text-sm px-2 py-2 shadow-md hover:bg-gray-100 transition-all duration-300"
           >
             Book a Call
           </a>
