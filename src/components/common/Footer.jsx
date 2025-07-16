@@ -10,15 +10,16 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-100 dark:bg-slate-900 text-black dark:text-white">
       <div className="bg-slate-200 dark:bg-slate-800 px-3 py-4 md:px-6 md:py-10 rounded-t-3xl">
-        <div className="max-w-[1100px] mx-auto grid sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-3 md:mb-6 mb-52">
+        <div className="max-w-[1100px] mx-auto grid sm:grid-cols-5 md:grid-cols-5 gap-6 md:gap-3 md:mb-6 mb-52">
           {/* company details */}
           <div className="bg-white/50 dark:bg-slate-900/30 backdrop-blur-lg shadow-md col-span-2 p-3 md:p-8 rounded-2xl">
             <img src={Logo} alt="logo" className="w-20 mb-3 rounded-3xl" />
             <p className="text-gray-800 dark:text-gray-200 text-base md:max-w-[95%]">
-              Cryptic Entertainments is an India-based production house focused
-              on bringing the Indian tech story. We are continuously showcasing
-              the new emerging tech stories out of India in new fields like
-              Blockchain, AI, Metaverse etc.
+              At Cryptic, we believe a founder’s story is their most powerful
+              growth engine. In today’s world, people don’t just follow
+              companies — they follow leaders. Your personal brand is what
+              builds trust, attracts opportunities, and turns your vision into
+              influence.
             </p>
             <div className="flex gap-3 mt-4">
               <a
@@ -65,7 +66,6 @@ export default function Footer() {
             </h3>
             <div className="border-t-2 border-gray-800 dark:border-gray-200 mb-5"></div>
             <ul className="text-gray-800 dark:text-gray-200 text-sm">
-           
               <li className="mb-3">
                 <a
                   href="https://www.instagram.com/official.inderjit/"

@@ -78,11 +78,11 @@ const Hero = () => {
           once
         />
       </div> */}
-      <div className="relative pt-0 w-full gradient-bg box-shadow">
+      <div className="relative  w-full h-screen sm:h-auto pt-0 gradient-bg box-shadow">
         <img
           src="/hero/bgimage5.jpg"
           alt="Banner"
-          className="w-full image"
+          className="w-full image h-full object-fill"
           once
         />
         {/* Black fade at bottom */}
@@ -95,30 +95,30 @@ const Hero = () => {
                 <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
             </div>
             </Link> */}
-      <div className="flex flex-col items-center justify-center absolute inset-0 top-[10%] md:top-[-20%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[1.2]">
-        <p className="text-[25px] md:text-[55px] xl:text-[135px] text-white font-[300]">
+      <div className="flex flex-col items-center justify-center absolute inset-0  md:top-[-20%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[1.2]">
+        <p className="text-[35px] md:text-[55px] xl:text-[135px] text-white font-[300]">
           TRUST. <span className="font-[500]">BUILT IN.</span>
         </p>
 
-        <p className="text-[20px] md:text-[45px] xl:text-[114px] text-white font-[300]">
+        <p className="text-[25px] md:text-[45px] xl:text-[114px] text-white font-[300]">
           FUELING <span className="font-[500]">LEADERSHIP.</span>
         </p>
 
-        <p className="text-[15px] md:text-[25px] xl:text-[39px] text-white font-[500]">
+        <p className="text-[20px] md:text-[25px] xl:text-[39px] text-white font-[500]">
           BUILDING PERSONAL BRANDS THAT INSPIRE.
         </p>
 
-        <p className="text-[12px] md:text-[20px] xl:text-[27px] text-white font-[500] leading-snug">
+        <p className="text-[15px] md:text-[20px] xl:text-[27px] text-white font-[500] leading-snug">
           Trust turns audiences into believers.
           <br className="block md:hidden" />
           We help you earn it.
         </p>
 
-        <p className="text-[12px] md:text-[20px] xl:text-[27px] text-white font-[500] mt-2">
+        <p className="text-[15px] md:text-[20px] xl:text-[27px] text-white font-[500] mt-2">
           “Your brand. Your people.”
         </p>
 
-        <p className="text-[10px] md:text-[15px] xl:text-[22px] text-white font-[300] mt-3">
+        <p className="text-[13px] md:text-[15px] xl:text-[22px] text-white font-[300] mt-3">
           Empowering professionals and founders to grow with trust, visibility,
           and impact.
         </p>
