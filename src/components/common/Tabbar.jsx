@@ -17,7 +17,7 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
     switch (item) {
       case "Home":
         return <AiFillHome />;
-      case "Movies":
+      case "Our-Work":
         return <BiMovie />;
       case "About":
         return <MdOutlineContactPage />;
