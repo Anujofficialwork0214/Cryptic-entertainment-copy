@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { dropIn, attachWords } from "./animations";
+import { dropIn, attachWords } from "./Animations";
 
 const AnimatedTitle = ({ title, classes }) => {
     return (

@@ -8,9 +8,10 @@ export default function Content({ data }) {
                     <img src={data.img} alt='' className='w-full h-full rounded-2xl'/>
                 </div>
                 <div className='w-full p-6'>
+                    <h1 className="text-slate-900 dark:text-slate-100 text-lg font-bold mb-5">{data?.title}</h1>
                     <h3 className='md:text-xl text-lg text-slate-900 dark:text-slate-100 font-thin mb-5'>{data.content} 
                     </h3>
-                    <h3 className='md:text-xl text-lg text-slate-900 dark:text-slate-100 font-thin'>{data.content2}</h3>
+                    {/* <h3 className='md:text-xl text-lg text-slate-900 dark:text-slate-100 font-thin'>{data.content2}</h3> */}
                 </div>
                 
             </div>

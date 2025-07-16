@@ -10,41 +10,41 @@ const memberData = [
         designation: "Founder",
         img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
-    {
-        name: "Alextina Ditarson",
-        designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
+    // {
+    //     name: "Alextina Ditarson",
+    //     designation: "Founder",
+    //     img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    // },
 ]
 
 const borders = ['hsl(4, 84%, 64%)', "hsl(215, 89%, 75%)", "hsl(40, 87%, 65%)", "hsl(169, 73%, 40%)", "hsl(219, 47%, 55%)"]
@@ -56,7 +56,12 @@ export default function OurTeam() {
                 <AnimatedTitle title={"Our"} classes="text-3xl font-bold text-black dark:text-white"/>
                 <AnimatedTitle title={"Team"} classes="text-3xl font-bold text-rose-500"/>
             </div>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 max-w-[1300px] mx-auto">
+            {/* <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 max-w-[1300px] mx-auto">
+                {memberData.map((data, i) => (
+                    <MemberCard key={i} data={data} idx={i}/>
+                ))}
+            </div> */}
+             <div className="flex justify-center items-center">
                 {memberData.map((data, i) => (
                     <MemberCard key={i} data={data} idx={i}/>
                 ))}
