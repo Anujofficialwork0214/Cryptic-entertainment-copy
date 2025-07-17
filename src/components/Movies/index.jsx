@@ -589,7 +589,7 @@ export default function Index() {
                     allowFullScreen
                   ></iframe>
                 </div>
-              ) : person.instagramEmbed ? (
+              ) : person?.instagramEmbed ? (
                 <div
                   id={instaId}
                   className="w-full max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[300px]"
@@ -604,8 +604,7 @@ export default function Index() {
                     data-instgrm-permalink={person.instagramEmbed}
                     data-instgrm-version="14"
                     style={{
-                      margin: "0 auto",
-                      width: "100%",
+                      margin: "0 auto",                                        
                       display: loadingStates[instaId] ? "none" : "block",
                     }}
                   />
