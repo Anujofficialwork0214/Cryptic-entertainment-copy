@@ -155,6 +155,7 @@ const Hero = () => {
                   </svg>
                 </span>
 
+
                 {/* Medium screen icon */}
                 <span className="hidden md:block lg:hidden">
                   <svg
