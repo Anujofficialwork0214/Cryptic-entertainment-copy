@@ -2,9 +2,9 @@ import React from "react";
 
 export default function CardSkeleton() {
   return (
-    <div className="animate-pulse flex flex-col md:flex-row w-full max-w-[1200px] bg-white shadow-lg rounded-lg overflow-hidden p-6 sm:p-10 gap-6">
+    <div className="animate-pulse flex h-[650px]   flex-col md:flex-row w-full max-w-[1200px] bg-white shadow-lg rounded-lg overflow-hidden p-6 sm:p-10 gap-6">
       {/* Left Side Skeleton */}
-      <div className="relative w-full md:w-3/5 flex flex-col gap-4">
+      <div className="relative w-full md:w-3/5 flex flex-col gap-4 h-[600px] ">
         <div className="absolute top-0 left-0 h-full w-16 sm:w-20 bg-slate-300 rounded"></div>
 
         <div className="ml-20 sm:ml-24 mt-4 flex items-start gap-6">
@@ -27,12 +27,12 @@ export default function CardSkeleton() {
       </div>
 
       {/* Right Side Skeleton */}
-      <div className="w-full md:w-2/5 flex flex-col gap-4">
+      <div className="w-full md:w-2/5 flex flex-col gap-4 h-[600px] ">
         {/* YouTube Skeleton */}
         <div className="aspect-video w-full bg-gray-300 rounded-lg" />
 
         {/* Instagram Skeleton */}
-        <div className="w-full bg-gray-300 h-[100px] sm:h-[120px] rounded-lg" />
+        <div className="w-full bg-gray-300 h-[600px] sm:h-[120px] rounded-lg" />
       </div>
     </div>
   );
