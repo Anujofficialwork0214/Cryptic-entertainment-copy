@@ -45,7 +45,7 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
         </NavLink>
       ))}
       <div className="flex justify-end gap-2">
-        <div className="absolute -top-[92vh]  transform -translate-x-1/4 shadow  py-4 px-3  ">
+        <div className="absolute -top-[92vh]  transform -translate-x-1/4  py-4 px-3  ">
           <a
             href="https://forms.gle/TtBK4YUJZ2oJbuBc8"
             target="_blank"
