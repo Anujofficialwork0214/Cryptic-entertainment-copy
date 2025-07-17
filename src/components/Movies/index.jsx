@@ -469,39 +469,43 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-  data.forEach((person) => {
-    if (person.instagramEmbed) {
-      const id = `insta-${person.id}`;
-      
-      // Set initial loading
-      setLoadingStates((prev) => ({ ...prev, [id]: true }));
+    data.forEach((person) => {
+      if (person.instagramEmbed) {
+        const id = `insta-${person.id}`;
 
-      const interval = setInterval(() => {
-        const iframe = document.querySelector(`#${id} iframe`);
-        if (iframe) {
-          setLoadingStates((prev) => ({ ...prev, [id]: false }));
-          clearInterval(interval);
-        }
-      }, 300);
-    }
-  });
+        // Set initial loading
+        setLoadingStates((prev) => ({ ...prev, [id]: true }));
 
-  // Ensure Instagram embeds are parsed on re-render
-  const tryProcessInstagram = () => {
-    if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === "function") {
-      window.instgrm.Embeds.process();
-    }
-  };
+        const interval = setInterval(() => {
+          const iframe = document.querySelector(`#${id} iframe`);
+          if (iframe) {
+            setLoadingStates((prev) => ({ ...prev, [id]: false }));
+            clearInterval(interval);
+          }
+        }, 300);
+      }
+    });
 
-  // Slight delay to ensure DOM is ready
-  const timeout = setTimeout(() => {
-    tryProcessInstagram();
-  }, 500);
+    // Ensure Instagram embeds are parsed on re-render
+    const tryProcessInstagram = () => {
+      if (
+        window.instgrm &&
+        window.instgrm.Embeds &&
+        typeof window.instgrm.Embeds.process === "function"
+      ) {
+        window.instgrm.Embeds.process();
+      }
+    };
 
-  return () => {
-    clearTimeout(timeout);
-  };
-}, []);
+    // Slight delay to ensure DOM is ready
+    const timeout = setTimeout(() => {
+      tryProcessInstagram();
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <div className=" snap-y snap-mandatory">
@@ -599,15 +603,18 @@ export default function Index() {
                       Loading Instagram post...
                     </div>
                   )}
-                  <blockquote
-                    className="instagram-media"
-                    data-instgrm-permalink={person.instagramEmbed}
-                    data-instgrm-version="14"
-                    style={{
-                      margin: "0 auto",                                        
-                      display: loadingStates[instaId] ? "none" : "block",
-                    }}
-                  />
+                  {person.instagramEmbed && (
+                    <blockquote
+                      className="instagram-media"
+                      data-instgrm-permalink={person.instagramEmbed}
+                      data-instgrm-version="14"
+                      style={{
+                        margin: "0 auto",
+                        width: loadingStates[instaId] ? "0%" : "100%",
+                        display: loadingStates[instaId] ? "none" : "block",
+                      }}
+                    />
+                  )}
                 </div>
               ) : (
                 <img
