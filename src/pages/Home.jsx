@@ -21,7 +21,7 @@ const Home = () => {
             <LeadForm />
             <AboutHome />
             <Web3Partner />
-            <PastWork />
+            {/* <PastWork /> */}
         </motion.div>
     );
 };
