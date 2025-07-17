@@ -684,7 +684,7 @@ const data = [
     lesson: 'Authority through education in high-ticket domains.',
     image: '/testimonial/inderjeet.png',
     analyticsImg: '/inderjeet.jpg',
-    youtubeEmbed: 'https://www.youtube.com/embed/OxmMfnP-jrc',
+    youtubeEmbed: 'https://www.youtube.com/embed/X1CBs0zcITs',
   },
   {
     id: 3,
@@ -850,13 +850,13 @@ export default function Index() {
 
               {/* Right Section */}
               {person.youtubeEmbed ? (
-                <div className="w-full aspect-video max-w-[350px] p-4 sm:p-6 lg:h-[600px] flex justify-center items-center mx-auto">
+                <div className="w-full aspect-video max-w-[420px] p-4 sm:p-6 lg:h-[600px] flex justify-center items-center mx-auto">
                   <iframe
                     className="w-full h-full rounded-lg shadow-lg"
-                    src={person.youtubeEmbed}
+                    src={`${person?.youtubeEmbed}?autoplay=1&mute=1`}
                     title={person.name}
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     onLoad={() =>
                       setLoadingStates(prev => ({
@@ -869,7 +869,7 @@ export default function Index() {
               ) : person.instagramEmbed ? (
                 <div
                   id={instaId}
-                 className="w-full max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[800px]"
+                 className="w-full mx-auto max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[800px]"
                   style={{
                     position: 'relative',
                     overflow: 'hidden',
