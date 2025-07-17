@@ -683,7 +683,7 @@ const data = [
     strategy: 'Behind-the-scenes, local tours, customer success.',
     lesson: 'Authority through education in high-ticket domains.',
     image: '/testimonial/inderjeet.png',
-    analyticsImg: '/Inderjeet.jpg',
+    analyticsImg: '/inderjeet.jpg',
     youtubeEmbed: 'https://www.youtube.com/embed/OxmMfnP-jrc',
   },
   {
@@ -694,8 +694,8 @@ const data = [
     metrics: '450K YouTube | 350K Instagram.',
     strategy: 'Consistent storytelling rooted in heritage.',
     lesson: 'Passion + storytelling = cultural resonance.',
-    image: '/testimonial/Akash.png',
-    analyticsImg: '/Akash.jpg',
+    image: '/testimonial/akash.png',
+    analyticsImg: '/akash.jpg',
     instagramEmbed: 'https://www.instagram.com/reel/CxF7aEQR1qz/',
   },
   {
@@ -706,8 +706,8 @@ const data = [
     metrics: '180K+ followers.',
     strategy: 'Regional content, local dialect, emotional storytelling.',
     lesson: "When you're the face, the product sells itself.",
-    image: '/testimonial/Jaspreet.png',
-    analyticsImg: '/Jaspreet.jpg',
+    image: '/testimonial/jaspreet.png',
+    analyticsImg: '/jaspreet.jpg',
     youtubeEmbed: 'https://www.youtube.com/embed/OxmMfnP-jrc',
   }
 ];
@@ -775,7 +775,7 @@ export default function Index() {
       setLoadingStates(prev =>
         Object.fromEntries(Object.entries(prev).map(([key]) => [key, false]))
       );
-    }, 10000);
+    }, 4000);
 
 
     return () => {
@@ -803,7 +803,7 @@ export default function Index() {
         }
 
         return (
-          <div key={person.id} className="snap-center min-h-screen flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0">
+          <div key={person.id} className="snap-center h-[600]  flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0 py-10">
             <div className="flex flex-col md:flex-row w-full max-w-[1200px] bg-white shadow-lg rounded-lg overflow-hidden">
               {/* Left Section */}
               <div className="relative w-full md:w-3/5 px-6 sm:px-10 py-6 sm:py-10">
@@ -850,7 +850,7 @@ export default function Index() {
 
               {/* Right Section */}
               {person.youtubeEmbed ? (
-                <div className="w-full aspect-video max-w-[420px] p-4 sm:p-6 lg:h-[600px] flex justify-center items-center">
+                <div className="w-full aspect-video max-w-[350px] p-4 sm:p-6 lg:h-[600px] flex justify-center items-center mx-auto">
                   <iframe
                     className="w-full h-full rounded-lg shadow-lg"
                     src={person.youtubeEmbed}
@@ -869,11 +869,11 @@ export default function Index() {
               ) : person.instagramEmbed ? (
                 <div
                   id={instaId}
-                  className="w-full max-w-[320px] flex justify-center items-center min-h-[350px]"
+                 className="w-full max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[800px]"
                   style={{
                     position: 'relative',
                     overflow: 'hidden',
-                    minHeight: '350px',
+                    minHeight: '800px',
                   }}
                 >
                   <blockquote
@@ -882,7 +882,7 @@ export default function Index() {
                     data-instgrm-version="14"
                     style={{
                       width: '100%',
-                      minHeight: '350px',
+                      minHeight: '400px',
                       margin: '0 auto',
                       display: 'block',
                     }}
