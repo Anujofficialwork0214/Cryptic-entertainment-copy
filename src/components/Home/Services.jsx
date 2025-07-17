@@ -114,7 +114,7 @@ const data = [
 
 export default function Index() {
   return (
-    <div className="md:py-[60px] md:px-2 px-5 py-5 bg-slate-100 dark:bg-gray-900 md:mt-24 ">
+    <div className="md:pt-[129px]  md:px-2 px-5 py-5 bg-slate-100 dark:bg-gray-900 md:mt-24 ">
       <div className="max-w-[1200px] mx-auto pt-10">
         <AnimatedTitle
           title={"Services"}
