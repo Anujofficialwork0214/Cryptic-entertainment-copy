@@ -6,9 +6,9 @@ import { CgFacebook } from "react-icons/cg";
 
 const memberData = [
     {
-        name: "Alextina Ditarson",
+        name: "Litesh Gumber",
         designation: "Founder",
-        img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        img: "/ourteam/litesh.png"
     },
     // {
     //     name: "Alextina Ditarson",
