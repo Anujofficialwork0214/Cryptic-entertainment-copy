@@ -430,7 +430,7 @@ const data = [
     image: "/testimonial/inderjeet.png",
     analyticsImg: "/Inderjeet.jpg",
     // instagramEmbed: 'https://www.instagram.com/official.inderjit/',
-    youtubeEmbed: "https://www.youtube.com/embed/OxmMfnP-jrc",
+    youtubeEmbed: "https://www.youtube.com/embed/X1CBs0zcITs",
   },
   {
     id: 3,
@@ -469,24 +469,39 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-    data.forEach((person) => {
-      if (person.instagramEmbed) {
-        const id = `insta-${person.id}`;
-        const interval = setInterval(() => {
-          const iframe = document.querySelector(`#${id} iframe`);
-          if (iframe) {
-            setLoadingStates((prev) => ({ ...prev, [id]: false }));
-            clearInterval(interval);
-          }
-        }, 300);
+  data.forEach((person) => {
+    if (person.instagramEmbed) {
+      const id = `insta-${person.id}`;
+      
+      // Set initial loading
+      setLoadingStates((prev) => ({ ...prev, [id]: true }));
 
-        // Set initial loading
-        setLoadingStates((prev) => ({ ...prev, [id]: true }));
+      const interval = setInterval(() => {
+        const iframe = document.querySelector(`#${id} iframe`);
+        if (iframe) {
+          setLoadingStates((prev) => ({ ...prev, [id]: false }));
+          clearInterval(interval);
+        }
+      }, 300);
+    }
+  });
 
-        return () => clearInterval(interval);
-      }
-    });
-  }, []);
+  // Ensure Instagram embeds are parsed on re-render
+  const tryProcessInstagram = () => {
+    if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === "function") {
+      window.instgrm.Embeds.process();
+    }
+  };
+
+  // Slight delay to ensure DOM is ready
+  const timeout = setTimeout(() => {
+    tryProcessInstagram();
+  }, 500);
+
+  return () => {
+    clearTimeout(timeout);
+  };
+}, []);
 
   return (
     <div className=" snap-y snap-mandatory">
@@ -564,7 +579,7 @@ export default function Index() {
 
               {/* Right Section */}
               {person.youtubeEmbed ? (
-                <div className="w-full aspect-video max-w-[400px] p-4 sm:p-6">
+                <div className="w-full aspect-video max-w-[420px] p-4 sm:p-6 lg:h-[600px] flex justify-center items-center">
                   <iframe
                     className="w-full h-full rounded-lg shadow-lg"
                     src={person.youtubeEmbed}
@@ -577,7 +592,7 @@ export default function Index() {
               ) : person.instagramEmbed ? (
                 <div
                   id={instaId}
-                  className="w-full max-w-[320px] flex justify-center items-center min-h-[300px]"
+                  className="w-full max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[300px]"
                 >
                   {loadingStates[instaId] && (
                     <div className="text-gray-500 animate-pulse">
