@@ -57,7 +57,7 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
         </NavLink>
       ))}
       <div className="flex justify-end gap-2  ">
-        <div className="absolute -top-[92vh]  transform -translate-x-1/4  py-4 px-3 mt-0.5">
+        <div className="absolute -top-[92vh]  transform -translate-x-1/4  py-4 px-3 ">
           <a
             href="https://forms.gle/TtBK4YUJZ2oJbuBc8"
             target="_blank"
@@ -67,11 +67,11 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
             Book a Call
           </a>
         </div>
-        <div className="absolute -top-[91vh] right-2 bg-white/50 dark:bg-slate-900/50 p-4 rounded-full shadow backdrop-blur-md mt-1">
+        <div className="absolute -top-[91vh] right-2 bg-white/50 dark:bg-slate-900/50 p-4 rounded-full shadow backdrop-blur-md ">
           <Switcher />
         </div>
       </div>
-      <div className="absolute -top-[91vh] left-2 bg-white/50 dark:bg-slate-900/50 p-2 rounded-full shadow backdrop-blur-md mt-1">
+      <div className="absolute -top-[91vh] left-2 bg-white/50 dark:bg-slate-900/50 p-2 rounded-full shadow backdrop-blur-md ">
         <img
         key={theme}
           src={theme === 'dark' ? Logo2 : Logo3}
