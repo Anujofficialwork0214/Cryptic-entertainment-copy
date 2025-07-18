@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/logo/logo ce.svg";
+//import Logo from "../../assets/logo/logo ce.svg";
 import Switcher from "./Switcher";
 import useScrollY from "../../hooks/useScrollY";
+import Logo2 from "../../assets/logo2.png"
+import Logo3 from "../../assets/logo3.png"
+// import useDarkSide from "../../hooks/useDarkSide";
+import { useTheme } from "../../hooks/ThemeContext";
+
+
 
 const Navbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
+    const { theme } = useTheme(); // ✅ Reactive theme value
   const scrollY = useScrollY();
   const [stickyActive, setStickyActive] = React.useState(false);
   React.useEffect(() => {
@@ -21,7 +28,7 @@ const Navbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
       } `}
     >
       <span className="text-5xl text-gray-800 -mb-1">
-        <img src={Logo} alt="Logo" className="w-[40px] rounded-xl" />
+        <img src={theme === 'dark' ? Logo2 : Logo3} alt="Logo" className="w-[40px] rounded-xl" />
       </span>
       <ul className="flex flex-row self-end h-12">
         {navigationData.map((item, index) => (

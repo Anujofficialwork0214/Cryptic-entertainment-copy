@@ -43,8 +43,6 @@ const marqueeContent = [
   { content: "BRAND CONSULTATION" },
 ];
 
-
-
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(
     Math.floor(Math.random() * banners.length)
@@ -80,7 +78,7 @@ const Hero = () => {
       </div> */}
       <div className="relative  w-full h-screen sm:h-auto pt-0 gradient-bg box-shadow">
         <img
-          src="/hero/bgimage5.jpg"
+          src="/hero/bgimage6.jpg"
           alt="Banner"
           className="w-full image h-full object-fill"
           once
@@ -95,26 +93,26 @@ const Hero = () => {
                 <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
             </div>
             </Link> */}
-      <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[-20%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[1.2]">
-        <p className="text-[35px] md:text-[55px] xl:text-[135px] text-white font-[300]">
+      <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[10%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[2] lg:leading-[1.2] mt-[102px] md:mt-0">
+        <p className="text-[26px] md:text-[55px] xl:text-[135px] text-white font-[300]">
           TRUST. <span className="font-[500]">BUILT IN.</span>
         </p>
 
-        <p className="text-[25px] md:text-[45px] xl:text-[114px] text-white font-[300]">
+        <p className="text-[22px] md:text-[45px] xl:text-[114px] text-white font-[300]">
           FUELING <span className="font-[500]">LEADERSHIP.</span>
         </p>
 
-        <p className="text-[20px] md:text-[25px] xl:text-[39px] text-white font-[500]">
+        <p className="text-[18px] sm:text-[22px] md:text-[25px] xl:text-[39px] text-white font-[500] mt-4">
           BUILDING PERSONAL BRANDS THAT INSPIRE.
         </p>
 
-        <p className="text-[15px] md:text-[20px] xl:text-[27px] text-white font-[500] leading-snug">
+        <p className="text-[15px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-4">
           Trust turns audiences into believers.
-          <br className="block md:hidden" />
+          <br className="block sm:hidden" />
           We help you earn it.
         </p>
 
-        <p className="text-[15px] md:text-[20px] xl:text-[27px] text-white font-[500] mt-2">
+        <p className="text-[14px] md:text-[20px] xl:text-[27px] text-white font-[500] mt-2">
           “Your brand. Your people.”
         </p>
 
@@ -154,7 +152,6 @@ const Hero = () => {
                     <circle cx="12" cy="12" r="8" />
                   </svg>
                 </span>
-
 
                 {/* Medium screen icon */}
                 <span className="hidden md:block lg:hidden">
@@ -260,3 +257,31 @@ const Hero = () => {
 };
 
 export default Hero;
+
+//    <div className="absolute h-screen inset-0 flex flex-col justify-center items-center px-4 text-center leading-[2] sm:leading-normal">
+//   <p className="text-[26px] sm:text-[35px] md:text-[55px] xl:text-[110px] text-white font-light">
+//     TRUST. <span className="font-semibold">BUILT IN.</span>
+//   </p>
+
+//   <p className="text-[22px] sm:text-[30px] md:text-[45px] xl:text-[95px] text-white font-light mt-2">
+//     FUELING <span className="font-semibold">LEADERSHIP.</span>
+//   </p>
+
+// <p className="text-[18px] sm:text-[22px] md:text-[25px] xl:text-[39px] text-white font-semibold mt-4">
+//   BUILDING PERSONAL BRANDS THAT INSPIRE.
+// </p>
+
+// <p className="text-[14px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-4">
+//   Trust turns audiences into believers.
+//   <br className="block sm:hidden" />
+//   We help you earn it.
+// </p>
+
+//   <p className="text-[14px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-2 italic">
+//     “Your brand. Your people.”
+//   </p>
+
+//   <p className="text-[12px] sm:text-[14px] md:text-[16px] xl:text-[22px] text-white font-light mt-4 max-w-[90%] sm:max-w-[80%] md:max-w-[70%]">
+//     Empowering professionals and founders to grow with trust, visibility, and impact.
+//   </p>
+// </div>

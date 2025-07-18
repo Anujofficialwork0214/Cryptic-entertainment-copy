@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import useDarkSide from '../../hooks/useDarkSide';
+import { useTheme } from '../../hooks/ThemeContext'; // ⬅️ use your context hook
 
 export default function Switcher() {
-    const [colorTheme, setTheme] = useDarkSide();
-    const [darkSide, setDarkSide] = useState(colorTheme === "light" ? true : false);
+    const { theme, toggleTheme } = useTheme(); // ⬅️ get from context
+    const [darkSide, setDarkSide] = useState(theme === "dark");
+
+    useEffect(() => {
+        setDarkSide(theme === "dark");
+    }, [theme]);
 
     const toggleDarkMode = (checked) => {
-        setTheme(colorTheme)
-        setDarkSide(checked);
-    }
+        toggleTheme(); // from context
+    };
 
     return (
         <DarkModeSwitch
@@ -17,5 +20,5 @@ export default function Switcher() {
             onChange={toggleDarkMode}
             className="md:w-8 md:h-8 w-6 h-6 icon-dl"
         />
-    )
+    );
 }
