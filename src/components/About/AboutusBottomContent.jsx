@@ -62,7 +62,7 @@ const AboutusBottomContent = ({ data }) => {
           </p>
         </div>
 
-        <p className="mt-6 text-lg font-semibold italic text-rose-600 dark:text-rose-400 tracking-tight">
+        <p className="mt-6 text-lg font-semibold italic text-black dark:text-white tracking-tight">
           {data.closingCTA}
         </p>
       </div>

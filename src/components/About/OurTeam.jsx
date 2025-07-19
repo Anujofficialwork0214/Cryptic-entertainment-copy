@@ -54,7 +54,7 @@ export default function OurTeam() {
         <div className="bg-slate-100 dark:bg-slate-900 py-6 pt-20">
             <div className="flex justify-center gap-2">
                 <AnimatedTitle title={"Our"} classes="text-3xl font-bold text-black dark:text-white"/>
-                <AnimatedTitle title={"Team"} classes="text-3xl font-bold text-rose-500"/>
+                <AnimatedTitle title={"Team"} classes="text-3xl font-bold text-black dark:text-white"/>
             </div>
             {/* <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 max-w-[1300px] mx-auto">
                 {memberData.map((data, i) => (
