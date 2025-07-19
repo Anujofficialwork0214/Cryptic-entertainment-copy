@@ -12,7 +12,7 @@ const AboutusBottomContent = ({ data }) => {
           {data.description}
         </p>
 
-        <ul className="space-y-2 mb-8 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-rose-500 dark:marker:text-rose-400">
+        <ul className="space-y-2 mb-8 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-black dark:marker:text-white">
           {data.services?.map((item, idx) => (
             <li key={idx} className="leading-snug">
               {item}
@@ -27,7 +27,7 @@ const AboutusBottomContent = ({ data }) => {
           <p className="text-slate-700 dark:text-slate-300 mb-3">
             {data.whyItMatters?.description}
           </p>
-          <ul className="space-y-1 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-rose-500 dark:marker:text-rose-400">
+          <ul className="space-y-1 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-black dark:marker:text-white">
             {data.whyItMatters?.outcomes?.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -41,7 +41,7 @@ const AboutusBottomContent = ({ data }) => {
           <p className="text-slate-700 dark:text-slate-300 mb-3">
             {data.whoWeWorkedWith?.description}
           </p>
-          <ul className="space-y-1 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-rose-500 dark:marker:text-rose-400">
+          <ul className="space-y-1 pl-6 list-disc text-slate-800 dark:text-slate-300 marker:text-black dark:marker:text-white">
             {data.whoWeWorkedWith?.clients?.map((client, idx) => (
               <li key={idx}>
                 <span className="font-medium text-slate-900 dark:text-white">
