@@ -43,7 +43,7 @@ const AboutHome = () => {
           <AnimatedTitle
             title={"Us"}
             classes={
-              "font-semibold text-rose-500 dark:text-rose-500 text-4xl text-center"
+              "font-semibold text-black dark:text-white text-4xl text-center"
             }
           />
         </div>

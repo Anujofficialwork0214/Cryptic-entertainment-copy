@@ -7,8 +7,11 @@ import { HiLocationMarker } from "react-icons/hi";
 import toast from 'react-hot-toast'
 
 import api from "../../api/api";
+import { useTheme } from "../../hooks/ThemeContext";
 
 const LeadForm = () => {
+
+    const {theme} = useTheme()
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -47,7 +50,7 @@ const LeadForm = () => {
             {/* <h3 className='font-semibold text-gray-900 dark:text-white text-4xl text-center mb-8'>Lead Form</h3> */}
             <div className='flex justify-center items-center gap-2 mb-8'>
                 <AnimatedTitle title={'Contact'} classes={'font-semibold text-gray-900 dark:text-white text-4xl text-center'} />
-                <AnimatedTitle title={'Us'} classes={'font-semibold text-rose-500 dark:text-rose-500 text-4xl text-center'} />
+                <AnimatedTitle title={'Us'} classes={'font-semibold text-black dark:text-white text-4xl text-center'} />
             </div>
             <div className="grid md:grid-cols-2 gap-10 md:gap-8 max-w-6xl mx-auto">
                 <div className="flex flex-col gap-8 justify-center">
@@ -200,7 +203,7 @@ const LeadForm = () => {
                         <input
                             type="submit"
                             value="Submit"
-                            className="px-5 cursor-pointer py-3 bg-rose-500 w-fit text-white rounded-xl"
+                            className={`px-5 cursor-pointer py-3 ${theme === "light" ? "bg-black text-white" : " bg-white text-black"}   w-fit  rounded-xl`}
                         />
                     </form>
                 </div>
