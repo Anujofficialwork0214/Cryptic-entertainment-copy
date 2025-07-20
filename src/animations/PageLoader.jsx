@@ -30,14 +30,14 @@ export default function PageLoader() {
     return (
         <div
             style={style}
-            className="z-[100] origin-top bg-rose-500 transition-all duration-500 ease-in-out fixed inset-0 text-center"
+            className="z-[100] origin-top bg-white transition-all duration-500 ease-in-out fixed inset-0 text-center"
         >
             <div style={style2} className=" origin-top transition-all duration-500 h-full w-full flex justify-center items-center bg-slate-100 dark:bg-slate-900">
                 <div>
                     {TEXT.map((word, idx) => {
                         return (
                             <h2
-                                className="loader-animation-title text-rose-500 text-5xl sm:text-5xl md:text-8xl lg:text-9xl font-black italic m-0"
+                                className="loader-animation-title text-black dark:text-white text-5xl sm:text-5xl md:text-8xl lg:text-9xl font-black italic m-0"
                                 key={idx}
                             >
                                 {word.split("").map((letter, id) => {
@@ -47,7 +47,7 @@ export default function PageLoader() {
                                             style={{
                                                 animationDelay: `${id * 100}ms`,
                                             }}
-                                            className="inline-block"
+                                            className="inline-block text-black dark:text-white"
                                         >
                                             {letter}
                                         </span>
