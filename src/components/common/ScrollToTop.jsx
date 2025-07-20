@@ -23,7 +23,7 @@ const ScrollToTop = () => {
     handleScroll();
   }, [scrollY]);
   useEffect(() => {
-    console.log("Theme changed to:", theme); // Will always reflect current
+    // console.log("Theme changed to:", theme); // Will always reflect current
   }, [theme]);
 
   return (

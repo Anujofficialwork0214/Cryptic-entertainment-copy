@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  console.log(theme)
+  // console.log(theme)
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
