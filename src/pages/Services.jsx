@@ -5,6 +5,7 @@ import Content from "../components/Services/Content";
 import { motion } from "framer-motion";
 import pageTransition from "../animations/pageTransition";
 import ContentFix from "../components/Services/ContentFix";
+import { useTheme } from "../hooks/ThemeContext";
 
 /* const data = [{
   title: "",
@@ -87,6 +88,7 @@ const data = [
 ];
 
 export default function Services() {
+  const {theme} = useTheme()
   return (
     <motion.div
       variants={pageTransition}

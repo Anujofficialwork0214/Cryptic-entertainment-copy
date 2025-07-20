@@ -64,7 +64,7 @@ const ContentSection = ({ title, content }) => {
             <h3 className="text-4xl font-medium text-black dark:text-white">
                 {title}
             </h3>
-            <div className="divider border-b border-rose-500 w-[120px]"></div>
+            <div className="divider border-b border-black dark:border-white w-[120px]"></div>
             <p className="text-base text-justify text-gray-800 dark:text-gray-100">
                 {content}
             </p>
