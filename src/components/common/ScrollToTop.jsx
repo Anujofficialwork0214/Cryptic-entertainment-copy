@@ -39,7 +39,7 @@ const ScrollToTop = () => {
           cy="40"
         ></circle>
         <circle
-          className={`${theme === "light" ? "text-rose-500" : "text-white"}`}
+          className={`${theme === "light" ? "text-black" : "text-white"}`}
           strokeWidth="5"
           strokeLinecap="round"
           stroke="currentColor"
@@ -52,7 +52,7 @@ const ScrollToTop = () => {
         ></circle>
       </svg>
       <span
-        className={`absolute ${theme === "light" ? "text-rose-500" : "text-white"} text-sm cursor-pointer`}
+        className={`absolute ${theme === "light" ? "text-black" : "text-white"} text-sm cursor-pointer`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <AiOutlineArrowUp className="w-4 h-4 mx-auto" />

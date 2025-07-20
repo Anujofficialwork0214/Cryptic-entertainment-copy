@@ -48,7 +48,7 @@ const Tabbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
           key={index}
           className={({ isActive }) =>
             isActive
-              ? " bg-gradient-to-t from-white/0 dark:from-black/0  to-rose-500/20 dark:to-rose-500/20 border-t-2 border-rose-500 text-rose-500 dark:text-white w-16 h-full flex items-center justify-center dark:border-white"
+              ? " bg-gradient-to-t from-white/0 dark:from-black/0  to-rose-500/20 dark:to-rose-500/20 border-t-2 border-black text-black dark:text-white w-16 h-full flex items-center justify-center dark:border-white"
               : "text-gray-400 hover:text-gray-700 dark:hover:text-white cursor-pointer w-16 h-full flex items-center justify-center"
           }
           onClick={() => setCurrentRoute(item)}

@@ -36,7 +36,7 @@ const Navbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
             to={item === "Home" ? "/" : `/${item}`}
             className={({ isActive }) =>
               isActive
-                ? "w-20 text-rose-500 dark:text-white border-b-4 border-rose-500 dark:border-white bg-gradient-to-b from-white/0 dark:from-black/0  to-rose-500/20 dark:to-rose-500/20 flex items-start justify-center "
+                ? "w-20 text-black dark:text-white border-b-4 border-black dark:border-white bg-gradient-to-b from-white/0 dark:from-black/0  to-rose-500/20 dark:to-rose-500/20 flex items-start justify-center "
                 : "w-20 text-gray-500 hover:text-gray-700 dark:hover:text-white cursor-pointer font-medium tracking-wide text-sm flex items-start justify-center"
             }
             key={index}
