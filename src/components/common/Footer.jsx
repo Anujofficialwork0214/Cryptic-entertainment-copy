@@ -148,7 +148,7 @@ export default function Footer() {
           </p>
           <p className="flex">
             Made with&nbsp;
-            <IoHeart className="text-red-500 w-4 h-4" />
+            <IoHeart className="text-black dark:text-white w-4 h-4" />
             &nbsp;in India
           </p>
         </div>
