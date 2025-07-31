@@ -5,26 +5,27 @@ import img3 from "../../assets/partners/polygon-matic-logo.png";
 import img4 from "../../assets/partners/download (1).png";
 import img5 from "../../assets/partners/095f339c95a27ca136aa962d09cf6f47.png";
 import AnimatedTitle from "../../animations/AnimatedTitle";
-import udemy2 from "../../assets/partners/udemy2.png";
-import salesforce from "../../assets/partners/salesforce.png";
+import udemy7 from "../../assets/partners/udemy7.png";
+import salesforce2 from "../../assets/partners/salesforce2.png";
 import naukri from "../../assets/partners/naukri.png";
-import omaxe from "../../assets/partners/omaxe.png";
+import omaxe1 from "../../assets/partners/omaxe1.png";
 import dfinityimg from "../../assets/partners/dfinityimg.png";
 import dfinityimg1 from "../../assets/partners/dfinityimg1.png";
+import near6 from "../../assets/partners/near6.png";
 import { useTheme } from "../../hooks/ThemeContext";
 
 const Web3Partner = () => {
   const {theme} = useTheme();
 
   const partners = [
-    udemy2,
-    salesforce,
+    udemy7,
+    salesforce2,
     naukri,
-    omaxe,
+    omaxe1,
     theme === "light" ? dfinityimg : dfinityimg1,
     img2,
     img3,
-    img4,
+    near6,
   ];
   return (
     <div className="md:py-[150px] md:px-20 px-5 py-20 bg-slate-100 dark:bg-gray-900">

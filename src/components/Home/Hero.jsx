@@ -93,7 +93,7 @@ const Hero = () => {
                 <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
             </div>
             </Link> */}
-      <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[10%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[2] lg:leading-[1.2] mt-[102px] md:mt-0">
+      {/* <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[10%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[2] lg:leading-[1.2] mt-[102px] md:mt-0">
         <p className="text-[26px] md:text-[55px] xl:text-[135px] text-white font-[300]">
           TRUST. <span className="font-[500]">BUILT IN.</span>
         </p>
@@ -120,7 +120,28 @@ const Hero = () => {
           Empowering professionals and founders to grow with trust, visibility,
           and impact.
         </p>
+      </div> */}
+
+      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 text-center mt-[60px] sm:mt-0 top-[-15%] md:top-[10%] xl:top-[-30%] ">
+        <div className="max-w-5xl mx-auto space-y-6">
+          <h1 className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-6xl leading-tight ">
+            More Than a Personal Brand THINK TANK.
+            <br />
+
+          </h1>
+          <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">We’re Your Full-Stack Creative POWERHOUSE.</h1>
+          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed ">
+            From Strategy To Storytelling, Video Content Production To Creative Designs – We Craft
+            Magnetic Personal Brands With The Full Force Of a Creative Powerhouse Behind Them.
+          </p>
+
+          <p className="text-white text-md sm:text-base md:text-xl lg:text-2xl font-semibold italic capitalize mt-5">
+            "Think bold. Think branded. Think unforgettable"
+          </p>
+
+        </div>
       </div>
+
 
       <div className="absolute bg-black xl:bottom-[40px] w-full md:h-60 flex justify-center items-center">
         <Marquee loop={0} speed={50} pauseOnHover={true}>

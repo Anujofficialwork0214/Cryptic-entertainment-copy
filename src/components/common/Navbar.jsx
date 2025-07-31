@@ -56,7 +56,7 @@ const Navbar = ({ navigationData, currentRoute, setCurrentRoute }) => {
           Book a Call
         </a>
 
-        <Switcher />
+        {/* <Switcher /> */}
       </div>
     </nav>
   );
