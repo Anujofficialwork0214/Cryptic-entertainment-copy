@@ -276,3 +276,19 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+// previous code
+//  <div className="relative w-full h-screen overflow-hidden">
+//       {/* Background Image */}
+//       <img
+//         src="/hero/bgimage11.jpg"
+//         alt="Banner"
+//         className="w-full h-full object-cover absolute top-0 left-0 z-0"
+//       />
+
+     
+
+//       {/* Bottom Fade */}
+//       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none z-10" />
+//     </div>
