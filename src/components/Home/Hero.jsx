@@ -149,7 +149,7 @@ const Hero = () => {
           <h1 className="text-white font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight">
             We’re Your Full-Stack Creative POWERHOUSE.
           </h1>
-          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed tracking-[0.05em]">
+          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed tracking-[0em] md:tracking-[0.01em]">
             From Strategy To Storytelling, Video Content Production To Creative Designs –
             We Craft Magnetic Personal Brands With The Full Force Of a Creative Powerhouse Behind Them.
           </p>

@@ -71,13 +71,22 @@ export default function Footer() {
             </h3>
             <div className="border-t-2 border-gray-800 dark:border-gray-200 mb-5"></div>
             <ul className="text-gray-800 dark:text-gray-200 text-sm">
+               <li className="mb-3">
+                <a
+                  href="https://www.youtube.com/@firstumpire/videos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  First Umpire - Deepak Goyal
+                </a>
+              </li>
               <li className="mb-3">
                 <a
                   href="https://www.instagram.com/official.inderjit/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Inderjit on Instagram
+                  inderjeet Aulakh on Instagram
                 </a>
               </li>
               <li className="mb-3">
