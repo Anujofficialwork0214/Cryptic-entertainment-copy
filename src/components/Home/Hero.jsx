@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
+import './Animation.css';
 import img1 from "../../assets/maxresdefault (4).jpg";
 import img2 from "../../assets/WhatsApp-Image-2023-03-20-at-11.37.23-AM.jpeg";
 import img3 from "../../assets/ep 1.jpg";
 import img4 from "../../assets/ep 2.jpg";
-import { IoPlay } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import ImageShadow from "react-image-shadow";
-import "react-image-shadow/assets/index.css";
-import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
 const banners = [
@@ -47,10 +44,12 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(
     Math.floor(Math.random() * banners.length)
   );
+
   const changeImage = () => {
     const randomNumber = Math.floor(Math.random() * banners.length);
     setCurrentImageIndex(randomNumber);
   };
+
   useEffect(() => changeImage(), []);
 
   const [fullSize, setFullSIze] = useState(
@@ -59,91 +58,109 @@ const Hero = () => {
   const [videoPre, setVideoPre] = useState(banners[currentImageIndex].videoId);
 
   const getImage = (image, video) => {
-    //console.log(image);
     setFullSIze(image);
     setVideoPre(video);
   };
 
+  useEffect(() => {
+    const container = document.getElementById('star-container');
+    const starCount = 30;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      star.style.animationDuration = `${6 + Math.random() * 5}s`;
+      container.appendChild(star);
+    }
+  }, []);
+
   return (
     <div className="w-full relative z-10 mb-10 md:mb-0">
-      {/* <div className="pt-0 w-full gradient-bg box-shadow">
-        <img src={banners[currentImageIndex]} alt='Banner' className='w-full' />
-        <img src={fullSize} alt='Banner' className='w-full image' once />
-        <img
-          src="/hero/bgimage5.jpg"
-          alt="Banner"
-          className="w-full image  "
-          once
-        />
-      </div> */}
-      <div className="relative  w-full h-screen sm:h-auto pt-0 gradient-bg box-shadow">
-        <img
-          src="/hero/bgimage6.jpg"
-          alt="Banner"
-          className="w-full image h-full object-fill"
-          once
-        />
+      <div className="relative w-full h-screen overflow-hidden">
+         {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-[#000000] z-0"></div>
+
+      {/* Star Container */}
+      <div id="star-container" className="absolute inset-0 z-10"></div>
+
+        {/* <div className="wrapper">
+          <div className="box">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <div key={index}></div>
+            ))}
+          </div>
+        </div> */}
+        {/* Black gradient fade at bottom */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+
+        {/* Custom CSS in the same file */}
+        <style>{`
+        .star {
+          position: absolute;
+          bottom: -10px;
+          width: 3px;
+          height: 3px;
+          background-color: white;
+          border-radius: 50%;
+          box-shadow: 0 0 6px white;
+          animation-name: rise;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes rise {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+            opacity: 1;
+          }
+          50% {
+            transform: translateX(30px) translateY(-50vh) rotate(180deg);
+            opacity: 0.6;
+          }
+          100% {
+            transform: translateX(-30px) translateY(-100vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+      `}</style>
+
+        {/* Gradient background and animated circles */}
+        <div className="wrapper">
+          {/* <div className="box">
+            {Array.from({ length: 10 }).map((_, index) => (
+              <div key={index}></div>
+            ))}
+          </div> */}
+        </div>
+
         {/* Black fade at bottom */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
       </div>
 
-      {/* <Link to={`/video/${videoPre}`}>
-            <div className="group absolute md:top-[40%] top-[30%] md:left-[50%] left-[40%] bg-rose-500/20 backdrop-blur-md rounded-full p-3 cursor-pointer">
-                <div className='ripple'><IoPlay className="h-12 w-12 text-rose-500 dark:text-rose-500 " /></div>
-                <span className='mt-5 group-hover:block hidden absolute bottom--4 bg-rose-500/20 text-rose-500 px-4  text-lg w-max left-[50%] translate-x-[-50%] rounded-xl backdrop-blur-md transition-all duration-500 delay-150 ease-in-out font-medium'>Watch Full Video</span>
-            </div>
-            </Link> */}
-      {/* <div className="flex flex-col items-center justify-center absolute inset-0 top-[-20%] md:top-[10%] xl:top-[-30%] text-center p-3 cursor-pointer leading-[2] lg:leading-[1.2] mt-[102px] md:mt-0">
-        <p className="text-[26px] md:text-[55px] xl:text-[135px] text-white font-[300]">
-          TRUST. <span className="font-[500]">BUILT IN.</span>
-        </p>
 
-        <p className="text-[22px] md:text-[45px] xl:text-[114px] text-white font-[300]">
-          FUELING <span className="font-[500]">LEADERSHIP.</span>
-        </p>
-
-        <p className="text-[18px] sm:text-[22px] md:text-[25px] xl:text-[39px] text-white font-[500] mt-4">
-          BUILDING PERSONAL BRANDS THAT INSPIRE.
-        </p>
-
-        <p className="text-[15px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-4">
-          Trust turns audiences into believers.
-          <br className="block sm:hidden" />
-          We help you earn it.
-        </p>
-
-        <p className="text-[14px] md:text-[20px] xl:text-[27px] text-white font-[500] mt-2">
-          “Your brand. Your people.”
-        </p>
-
-        <p className="text-[13px] md:text-[15px] xl:text-[22px] text-white font-[300] mt-3">
-          Empowering professionals and founders to grow with trust, visibility,
-          and impact.
-        </p>
-      </div> */}
-
-      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 text-center mt-[60px] sm:mt-0 top-[-15%] md:top-[10%] xl:top-[-30%] ">
+      {/* Text Content */}
+      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 text-center mt-[60px] sm:mt-0 top-[-15%] md:top-[-20%] xl:top-[-30%]">
         <div className="max-w-5xl mx-auto space-y-6">
-          <h1 className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-6xl leading-tight ">
+          <h1 className="text-white font-bold text-lg sm:text-4xl md:text-4xl lg:text-5xl leading-tight">
             More Than a Personal Brand THINK TANK.
-            <br />
-
           </h1>
-          <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">We’re Your Full-Stack Creative POWERHOUSE.</h1>
-          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed ">
-            From Strategy To Storytelling, Video Content Production To Creative Designs – We Craft
-            Magnetic Personal Brands With The Full Force Of a Creative Powerhouse Behind Them.
+          <h1 className="text-white font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight">
+            We’re Your Full-Stack Creative POWERHOUSE.
+          </h1>
+          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed tracking-[0.05em]">
+            From Strategy To Storytelling, Video Content Production To Creative Designs –
+            We Craft Magnetic Personal Brands With The Full Force Of a Creative Powerhouse Behind Them.
           </p>
-
           <p className="text-white text-md sm:text-base md:text-xl lg:text-2xl font-semibold italic capitalize mt-5">
             "Think bold. Think branded. Think unforgettable"
           </p>
-
         </div>
       </div>
 
-
-      <div className="absolute bg-black xl:bottom-[40px] w-full md:h-60 flex justify-center items-center">
+      {/* Marquee section */}
+      <div className="relative bg-black xl:bottom-[0px] w-full h-20 md:h-60 flex justify-center items-center">
         <Marquee loop={0} speed={50} pauseOnHover={true}>
           <div className="flex justify-center items-center  ">
             {" "}
@@ -254,55 +271,8 @@ const Hero = () => {
           </div>
         </Marquee>
       </div>
-
-      {/* <div className="absolute bottom-[50px] bg-gray-500/30 p-3 mx-20 my-5 rounded-3xl backdrop-blur-md md:block hidden">
-        <div className="grid grid-cols-4 gap-4 ">
-          {banners.map((item, i) => (
-            <div className="w-full rounded-2xl" key={i}>
-              <img
-                src={item.cover}
-                alt="Banner"
-                className={`w-full rounded-2xl cursor-pointer hover:grayscale-0 transition-all ease-in-out duration-500 delay-300 ${
-                  fullSize === item.video_sample ? "grayscale-0" : "grayscale"
-                }`}
-                onClick={() => {
-                  getImage(item.video_sample, item.videoId);
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 };
 
 export default Hero;
-
-//    <div className="absolute h-screen inset-0 flex flex-col justify-center items-center px-4 text-center leading-[2] sm:leading-normal">
-//   <p className="text-[26px] sm:text-[35px] md:text-[55px] xl:text-[110px] text-white font-light">
-//     TRUST. <span className="font-semibold">BUILT IN.</span>
-//   </p>
-
-//   <p className="text-[22px] sm:text-[30px] md:text-[45px] xl:text-[95px] text-white font-light mt-2">
-//     FUELING <span className="font-semibold">LEADERSHIP.</span>
-//   </p>
-
-// <p className="text-[18px] sm:text-[22px] md:text-[25px] xl:text-[39px] text-white font-semibold mt-4">
-//   BUILDING PERSONAL BRANDS THAT INSPIRE.
-// </p>
-
-// <p className="text-[14px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-4">
-//   Trust turns audiences into believers.
-//   <br className="block sm:hidden" />
-//   We help you earn it.
-// </p>
-
-//   <p className="text-[14px] sm:text-[16px] md:text-[20px] xl:text-[27px] text-white font-medium mt-2 italic">
-//     “Your brand. Your people.”
-//   </p>
-
-//   <p className="text-[12px] sm:text-[14px] md:text-[16px] xl:text-[22px] text-white font-light mt-4 max-w-[90%] sm:max-w-[80%] md:max-w-[70%]">
-//     Empowering professionals and founders to grow with trust, visibility, and impact.
-//   </p>
-// </div>
