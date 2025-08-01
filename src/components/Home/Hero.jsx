@@ -64,7 +64,7 @@ const Hero = () => {
 
   useEffect(() => {
     const container = document.getElementById('star-container');
-    const starCount = 30;
+    const starCount = 40;
 
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement('div');
