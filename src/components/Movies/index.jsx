@@ -659,7 +659,7 @@
 
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from './CardSkeleton'; // Adjust path as needed
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const data = [
@@ -676,7 +676,7 @@ const data = [
     analyticsImg: '/youtubecharul.jpg',
     instagramEmbed: 'https://www.instagram.com/reel/C8hc-wTCBIO/',
   },
-   {
+  {
     id: 2,
     name: '"Deepak Goyal',
     role: 'First Umpire',
@@ -736,10 +736,41 @@ const data = [
     analyticsImg: '/jaspreet.jpg',
     youtubeEmbed: 'https://www.youtube.com/embed/OxmMfnP-jrc',
   },
- 
+
 ];
 
 export default function Index() {
+
+  const location = useLocation();
+  const navigate = useNavigate()
+
+ useEffect(() => {
+  const locationPath = location.pathname;
+  const scrollToId = location.state?.scrollTo;
+
+  if (locationPath === "/Our-Work" && scrollToId) {
+    const id = `card-${scrollToId}`;
+    const scrollInterval = setInterval(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        clearInterval(scrollInterval);
+        // Clear scroll state from history to avoid re-scrolling
+        navigate(location.pathname, { replace: true, state: {} });
+      }
+    }, 300);
+
+    const timeout = setTimeout(() => clearInterval(scrollInterval), 5000);
+
+    return () => {
+      clearInterval(scrollInterval);
+      clearTimeout(timeout);
+    };
+  }
+}, [location]);
+
+
+
   const [loadingStates, setLoadingStates] = useState(() => {
     const insta = {};
     const yt = {};
@@ -802,7 +833,7 @@ export default function Index() {
       setLoadingStates(prev =>
         Object.fromEntries(Object.entries(prev).map(([key]) => [key, false]))
       );
-    }, 4000);
+    }, 3000);
 
 
     return () => {
@@ -823,7 +854,7 @@ export default function Index() {
 
         if (showSkeleton) {
           return (
-            <div key={person.id} className="snap-center min-h-screen flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0">
+            <div  key={person.id} className="snap-center min-h-screen flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0">
               <CardSkeleton />
             </div>
           );
@@ -883,7 +914,7 @@ export default function Index() {
                     src={`${person?.youtubeEmbed}?autoplay=1&mute=1`}
                     title={person.name}
                     frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     onLoad={() =>
                       setLoadingStates(prev => ({
@@ -896,7 +927,7 @@ export default function Index() {
               ) : person.instagramEmbed ? (
                 <div
                   id={instaId}
-                 className="w-full mx-auto max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[800px]"
+                  className="w-full mx-auto max-w-[420px] p-4 sm:p-6 flex justify-center items-center min-h-[800px]"
                   style={{
                     position: 'relative',
                     overflow: 'hidden',

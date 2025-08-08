@@ -63,6 +63,7 @@ const MarqueeContent = () => {
                     <div key={idx} className="mx-14 pointer-events-auto">
                         <Link
                              to={`/Our-Work`}
+                             state={{ scrollTo: item.id }}
                             className="block bg-white rounded-lg shadow-md w-[300px] h-[300px] p-6 flex flex-col items-center text-center cursor-pointer hover:shadow-lg transition-shadow duration-300"
                         >
                             <img
