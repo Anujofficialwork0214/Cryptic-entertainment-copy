@@ -6,6 +6,7 @@ import img3 from "../../assets/ep 1.jpg";
 import img4 from "../../assets/ep 2.jpg";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import MarqueeContent from "./MarqueeContent";
 
 const banners = [
   {
@@ -30,15 +31,7 @@ const banners = [
   },
 ];
 
-const marqueeContent = [
-  { content: "PERSONAL BRAND BUILDING" },
-  { content: "CONTENT STRATEGY DEVELOPMENT" },
-  { content: "BRAND IDENTITY" },
-  { content: "360° PROFILE MAKEOVER" },
-  { content: "INTENT BASED PERFORMANCE MARKETING" },
-  { content: "SOCIAL MEDIA GROWTH" },
-  { content: "BRAND CONSULTATION" },
-];
+
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(
@@ -136,140 +129,32 @@ const Hero = () => {
         </div>
 
         {/* Black fade at bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+        {/* <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" /> */}
       </div>
 
 
       {/* Text Content */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 text-center mt-[60px] sm:mt-0 top-[-15%] md:top-[-20%] xl:top-[-30%]">
+      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8 text-center mt-[60px] sm:mt-0 top-[-30%] md:top-[-20%] xl:top-[-30%]">
         <div className="max-w-5xl mx-auto space-y-6">
-          <h1 className="text-white font-bold text-lg sm:text-4xl md:text-4xl lg:text-5xl leading-tight">
+          <h1 className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight">
             More Than a Personal Brand THINK TANK.
           </h1>
-          <h1 className="text-white font-bold text-xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight">
+          <h1 className="text-white font-bold text-3xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight">
             We’re Your Full-Stack Creative POWERHOUSE.
           </h1>
-          <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed tracking-[0em] md:tracking-[0.01em]">
+          {/* <p className="text-white text-[16px] sm:text-lg md:text-xl lg:text-3xl font-light leading-relaxed tracking-[0em] md:tracking-[0.01em]">
             From Strategy To Storytelling, Video Content Production To Creative Designs –
             We Craft Magnetic Personal Brands With The Full Force Of a Creative Powerhouse Behind Them.
           </p>
           <p className="text-white text-md sm:text-base md:text-xl lg:text-2xl font-semibold italic capitalize mt-5">
             "Think bold. Think branded. Think unforgettable"
-          </p>
+          </p> */}
         </div>
       </div>
 
       {/* Marquee section */}
-      <div className="relative bg-black xl:bottom-[0px] w-full h-20 md:h-60 flex justify-center items-center">
-        <Marquee loop={0} speed={50} pauseOnHover={true}>
-          <div className="flex justify-center items-center  ">
-            {" "}
-            {marqueeContent.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-8 px-4">
-                {/* Small screen icon */}
-                <span className="block md:hidden">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="2" />
-                    <path d="M12 1v2" />
-                    <path d="M12 21v2" />
-                    <path d="M4.22 4.22l1.42 1.42" />
-                    <path d="M18.36 18.36l1.42 1.42" />
-                    <path d="M1 12h2" />
-                    <path d="M21 12h2" />
-                    <path d="M4.22 19.78l1.42-1.42" />
-                    <path d="M18.36 5.64l1.42-1.42" />
-                    <circle cx="12" cy="12" r="8" />
-                  </svg>
-                </span>
-
-                {/* Medium screen icon */}
-                <span className="hidden md:block lg:hidden">
-                  <svg
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="2" />
-                    <path d="M12 1v2" />
-                    <path d="M12 21v2" />
-                    <path d="M4.22 4.22l1.42 1.42" />
-                    <path d="M18.36 18.36l1.42 1.42" />
-                    <path d="M1 12h2" />
-                    <path d="M21 12h2" />
-                    <path d="M4.22 19.78l1.42-1.42" />
-                    <path d="M18.36 5.64l1.42-1.42" />
-                    <circle cx="12" cy="12" r="8" />
-                  </svg>
-                </span>
-
-                {/* Large screen icon */}
-                <span className="hidden lg:block xl:hidden">
-                  <svg
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="2" />
-                    <path d="M12 1v2" />
-                    <path d="M12 21v2" />
-                    <path d="M4.22 4.22l1.42 1.42" />
-                    <path d="M18.36 18.36l1.42 1.42" />
-                    <path d="M1 12h2" />
-                    <path d="M21 12h2" />
-                    <path d="M4.22 19.78l1.42-1.42" />
-                    <path d="M18.36 5.64l1.42-1.42" />
-                    <circle cx="12" cy="12" r="8" />
-                  </svg>
-                </span>
-
-                {/* Extra large screen icon */}
-                <span className="hidden xl:block">
-                  <svg
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="2" />
-                    <path d="M12 1v2" />
-                    <path d="M12 21v2" />
-                    <path d="M4.22 4.22l1.42 1.42" />
-                    <path d="M18.36 18.36l1.42 1.42" />
-                    <path d="M1 12h2" />
-                    <path d="M21 12h2" />
-                    <path d="M4.22 19.78l1.42-1.42" />
-                    <path d="M18.36 5.64l1.42-1.42" />
-                    <circle cx="12" cy="12" r="8" />
-                  </svg>
-                </span>
-                <p className="text-white md:text-[60px]">{item?.content}</p>
-              </div>
-            ))}
-          </div>
-        </Marquee>
+      <div className="relative z-20 bottom-[50px]  w-full h-40 md:h-10 flex justify-center items-center">
+       <MarqueeContent/>
       </div>
     </div>
   );

@@ -659,6 +659,8 @@
 
 import React, { useEffect, useState } from 'react';
 import CardSkeleton from './CardSkeleton'; // Adjust path as needed
+import { useLocation } from 'react-router-dom';
+
 
 const data = [
   {
@@ -674,8 +676,32 @@ const data = [
     analyticsImg: '/youtubecharul.jpg',
     instagramEmbed: 'https://www.instagram.com/reel/C8hc-wTCBIO/',
   },
-  {
+   {
     id: 2,
+    name: '"Deepak Goyal',
+    role: 'First Umpire',
+    story: 'Welcome to First Umpire, the ultimate destination for cricket fans',
+    metrics: '26K+ followers.',
+    strategy: "Deliver highly engaging, real-time cricket content tailored for every fan—leveraging live updates, match breakdowns, and regional storytelling to build a loyal, interactive cricket community.",
+    lesson: "Latest News & Updates: Stay current with breaking cricket news.",
+    image: '/testimonial/first-umpire.png',
+    analyticsImg: '/jaspreet.jpg',
+    youtubeEmbed: 'https://www.youtube.com/embed/juHt_PKfaPw',
+  },
+  {
+    id: 3,
+    name: 'Ishita',
+    role: 'Freshers GPT',
+    story: 'Launch your career with confidence and clarity.',
+    metrics: '103K+ followers.',
+    strategy: 'Empowering fresh graduates with relatable, actionable career content using a confident, motivational tone to build trust and engagement.',
+    lesson: 'Authenticity and relevance resonate — speak directly to your audience’s stage of life and goals.',
+    image: '/testimonial/fresherGPT.png',
+    analyticsImg: '/jaspreet.jpg',
+    youtubeEmbed: 'https://www.youtube.com/embed/c5tqMvDtdQY',
+  },
+  {
+    id: 4,
     name: 'Inderjeet Aulakh',
     role: 'MPro Developers',
     story: 'Builder to Trusted Real Estate Guide',
@@ -687,7 +713,7 @@ const data = [
     youtubeEmbed: 'https://www.youtube.com/embed/X1CBs0zcITs',
   },
   {
-    id: 3,
+    id: 5,
     name: 'Akash Bajwa',
     role: 'Nek Punjabi History',
     story: 'From Faith to Movement',
@@ -699,7 +725,7 @@ const data = [
     instagramEmbed: 'https://www.instagram.com/reel/CxF7aEQR1qz/',
   },
   {
-    id: 4,
+    id: 6,
     name: 'Jaspreet Singh',
     role: 'NekPunjabi Estates',
     story: 'Real Estate with a Real Face',
@@ -709,7 +735,8 @@ const data = [
     image: '/testimonial/jaspreet.png',
     analyticsImg: '/jaspreet.jpg',
     youtubeEmbed: 'https://www.youtube.com/embed/OxmMfnP-jrc',
-  }
+  },
+ 
 ];
 
 export default function Index() {
@@ -803,7 +830,7 @@ export default function Index() {
         }
 
         return (
-          <div key={person.id} className="snap-center h-[600]  flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0 py-10">
+          <div id={`card-${person.id}`} key={person.id} className="snap-center h-[600]  flex items-center justify-center px-2 sm:px-4 mb-10 sm:mb-0 py-10">
             <div className="flex flex-col md:flex-row w-full max-w-[1200px] bg-white shadow-lg rounded-lg overflow-hidden">
               {/* Left Section */}
               <div className="relative w-full md:w-3/5 px-6 sm:px-10 py-6 sm:py-10">
@@ -816,7 +843,7 @@ export default function Index() {
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-start gap-6 ml-20 sm:ml-24 mt-4 ">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-6 ml-20 sm:ml-24 mt-4 ">
                   <img
                     src={person.image}
                     alt={person.name}
@@ -824,11 +851,11 @@ export default function Index() {
                   />
                   <div>
                     <h2 className="text-2xl sm:text-4xl font-bold dark:text-slate-500 leading-tight">
-                      {person.name.split(' ')[0]}
+                      {person.name}
                     </h2>
-                    <h2 className="text-2xl sm:text-4xl font-bold dark:text-slate-500 leading-tight">
+                    {/* <h2 className="text-2xl sm:text-4xl font-bold dark:text-slate-500 leading-tight">
                       {person.name.split(' ')[1]}
-                    </h2>
+                    </h2> */}
                     <h3 className="text-xl sm:text-3xl font-black text-black">({person.role})</h3>
                   </div>
                 </div>
