@@ -15,6 +15,28 @@ const memberData = [
       "Before working with Cryptic, I was struggling to show the world what we were building. Within months, they transformed my scattered ideas into a clear personal brand. My LinkedIn engagement tripled, and I started getting inbound invites from VCs and podcasts I’d only dreamed of before. They don’t just create content — they create credibility",
     ytLink: "https://www.youtube.com/@Career_GPT",
   },
+
+  {
+  name: "Deepak Goyal",
+  designation: "First Umpire",
+  img: "/testimonial/first-umpire.png", // save image here
+ comment: `Before partnering with Cryptic, my cricket channel had passionate followers but lacked reach beyond a niche audience. 
+Cryptic helped me craft a professional brand strategy, optimize my YouTube presence, and create content that resonated with fans across the country. 
+Within months, our subscriber count doubled,`,
+
+  ytLink: "https://www.youtube.com/@FirstUmpire",
+}
+,
+  {
+  name: "Ishita",
+  designation: "Freshers GPT",
+  img: "/testimonial/fresherGPT.png", // save image here
+  comment: `Before working with Cryptic, I had valuable career advice to share but struggled to present it in a way that connected with fresh graduates. 
+Cryptic guided me in defining my personal brand, creating a consistent content style, and reaching the right audience. 
+In just a few months, my videos started trending among job seekers,`,
+  ytLink: "https://www.youtube.com/@FreshersGPT",
+}
+,
   {
     name: "Inderjeet Aulakh",
     designation: "MPro Developers",
